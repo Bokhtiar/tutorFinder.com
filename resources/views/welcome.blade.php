@@ -13,15 +13,17 @@
         <div class="navbar bg-base-100">
             <div class="flex-1">
                 <a href="#" class="">
-                    <img class="h-12" src="https://play-lh.googleusercontent.com/bXqShzaPZQpV1EmdqnmCqLFNfFbidLo8AMJylMhkMqXQLY97yIJV04zWb6YV_JM1tg" alt="">
+                    <img class="h-12"
+                        src="https://play-lh.googleusercontent.com/bXqShzaPZQpV1EmdqnmCqLFNfFbidLo8AMJylMhkMqXQLY97yIJV04zWb6YV_JM1tg"
+                        alt="">
                 </a>
             </div>
             <div class="flex-none">
                 <ul class="menu menu-horizontal px-1">
-                    <li class="px-6 text-xl font-mono"><a>Home</a></li>
-                    <li class="px-6 text-xl font-mono"><a>About</a></li>
-                    <li class="px-6 text-xl font-mono"><a>Tutor</a></li>
-                    <li class="px-6 text-xl font-mono"><a>Contact Us</a></li>
+                    <li class="px-2 text-xl font-mono"><a>Home</a></li>
+                    <li class="px-2 text-xl font-mono"><a>About</a></li>
+                    <li class="px-2 text-xl font-mono"><a>Tutor</a></li>
+                    <li class="px-2 text-xl font-mono"><a>Contact Us</a></li>
                     {{-- <li tabindex="0">
                         <a>
                             Parent
@@ -37,26 +39,61 @@
                     </li> --}}
                     <div class="dropdown dropdown-end ">
                         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                          <div class="w-10 rounded-full">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWHqFL_XoLC7x1onY_BcwSLskANCrxFYFUxen4UwrqhJeDujbhN70xXCTr4r4Ewc_2lro&usqp=CAU" />
-                          </div>
+                            <div class="w-10 rounded-full">
+                                <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWHqFL_XoLC7x1onY_BcwSLskANCrxFYFUxen4UwrqhJeDujbhN70xXCTr4r4Ewc_2lro&usqp=CAU" />
+                            </div>
                         </label>
-                        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                          <li class="px-6 text-xl font-mono">
-                            <a class="justify-between">
-                              Profile
-                              <span class="badge">New</span>
-                            </a>
-                          </li>
-                          <li><a>Settings</a></li>
-                          <li><a>Logout</a></li>
+                        <ul tabindex="0"
+                            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li class="px-2 text-xl font-mono">
+                                <a class="justify-between">
+                                    Profile
+                                    <span class="badge">New</span>
+                                </a>
+                            </li>
+                            <li><a>Settings</a></li>
+                            <li><a>Logout</a></li>
                         </ul>
-                      </div>
+                    </div>
                 </ul>
             </div>
         </div>
     </section>
     {{-- header section end here --}}
+
+    {{-- banner section start --}}
+    <section class="bg-gray-200">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                {{-- left side  --}}
+                <div class="col-span-1 py-56">
+                    <p class="text-black text-5xl font-bold">A learing platform that <br> helps you to learn <br> faster
+                    </p>
+                    <p class="text-2xl text-gray-500 py-5">Reference site about Lorem Ipsum Lorem Ipsum, <br> giving
+                        information on its origins,</p>
+                    <p class="flex items-center gap-3">
+                        @component('components.primary_button', [
+                            'name' => 'Find Tutor',
+                            'colorfull' => true,
+                        ])
+                        @endcomponent
+                        @component('components.primary_button', [
+                            'name' => 'Search Tutor',
+                            'colorfull' => false,
+                        ])
+                        @endcomponent
+                    </p>
+                </div>
+                {{-- left side end --}}
+                <div class="col-span-1  py-24">
+                    <img class="rounded-full h-[560px] w-[560px] mx-auto" src="https://thetrainingassociates.com/wp-content/uploads/2019/09/AdobeStock_175567791.jpeg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- banner section end --}}
 
 </body>
 
