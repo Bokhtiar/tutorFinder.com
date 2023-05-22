@@ -7,6 +7,8 @@
     @vite('resources/css/app.css')
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -99,7 +101,8 @@
     {{-- banner section end --}}
 
     {{-- better learing better result start here --}}
-    <section class="container mx-auto my-20">
+    <section class="container mx-auto my-20"  data-aos="fade-up"
+    data-aos-duration="3000">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
             {{-- first grid start here --}}
             <div class="">
@@ -132,7 +135,9 @@
     {{-- better learing better result end here --}}
 
     {{-- counter start here --}}
-    <section class="container mx-auto my-40">
+    <section class="container mx-auto my-40" data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             {{-- first counter start here --}}
             <div class="w-80 h-48 bg-gray-100 rounded text-center">
@@ -180,7 +185,9 @@
     {{-- counter end here --}}
 
     {{-- services start here --}}
-    <section class="container mx-auto">
+    <section class="container mx-auto" data-aos="fade-left"
+    data-aos-offset="500"
+    data-aos-duration="500">
         <h3 class="text-center font-bold text-3xl my-5 text-green-500">All These Services For You</h3>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             {{-- first counter start here --}}
@@ -239,7 +246,9 @@
     {{-- services end here --}}
 
     {{-- top intructor start here --}}
-    <section class="container mx-auto">
+    <section class="container mx-auto" data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine">
         <h3 class="font-bold text-3xl text-green-500 mt-40 mb-5">Top instructors</h3>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
             {{-- card start here --}}
@@ -484,7 +493,7 @@
     {{-- top intructor end here --}}
 
     {{-- what people aobut say start here --}}
-    <section class="bg-gray-100 ">
+    <section class="bg-gray-100" data-aos="zoom-in">
         <div class="container mx-auto my-40">
             <h3 class="font-bold text-3xl text-green-500 text-center pt-16  my-24">What people about say us</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 px-72">
@@ -514,7 +523,9 @@
     {{-- what people aobut say end here --}}
 
     {{-- professional tutor start here --}}
-    <section class=" container mx-auto">
+    <section class=" container mx-auto" data-aos="fade-left"
+    data-aos-offset="500"
+    data-aos-duration="500">
         <h3 class="font-bold text-3xl text-green-500">Professional For Guidance</h3>
 
         {{-- course  --}}
@@ -805,8 +816,7 @@
     {{-- professional tutor end here --}}
 
     {{-- contact us start here --}}
-
-    <section class="my-40">
+    <section class="my-40" data-aos="zoom-in-left">
         <div class="text-center w-full">
 
         </div>
@@ -1518,12 +1528,12 @@
 
         </div>
     </div>
-
-
-
-
     {{-- footer end here --}}
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
