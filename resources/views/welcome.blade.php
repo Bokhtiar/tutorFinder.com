@@ -95,6 +95,36 @@
     </section>
     {{-- banner section end --}}
 
+    {{-- better learing better result start here --}}
+    <section class="container mx-auto my-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {{-- first grid start here --}}
+            <div class="">
+                <img class=" rounded-xl" src="https://tiptopbrain.com/wp-content/uploads/2020/09/student-doing-math-6-tips.jpeg" alt="">
+            </div>
+            {{-- first grid end here --}}
+            {{-- secound grid start here --}}
+            <div class="mt-5">
+                <h3 class=" text-3xl text-green-600">Better learing better result</h3>
+                <p class="my-10 text-5xl font-bold">
+                    Online educational platform that fit for every one
+                </p>
+                <p class="text-xl text-gray-400 my-10">
+                    The best online course platform for creating, selling and promoting your online courses. Start monetizing your skills, experiences and your audience.
+                    Engage learners with interactive videos, ebooks, 1:1 & group sessions, assessments, certificates, SCORMs, surveys, and much more.
+                </p>
+                @component('components.primary_button',[
+                    'name'=> 'Explore more about us',
+                    'colorfull' => true
+                ])
+                    
+                @endcomponent
+            </div>
+            {{-- secound grid end here --}}
+        </div>
+    </section>
+    {{-- better learing better result end here --}}
+
 </body>
 
 </html>
