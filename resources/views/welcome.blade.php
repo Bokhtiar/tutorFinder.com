@@ -429,6 +429,32 @@
     </section>
     {{-- top intructor end here --}}
 
+    {{-- what people aobut say start here --}}
+    <section class="bg-gray-100 ">
+        <div class="container mx-auto my-40">
+            <h3 class="font-bold text-3xl text-green-500 text-center pt-16  my-24">What people about say us</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 px-72">
+                {{-- review image start here --}}
+                <div class="mx-auto col-span-1">
+                    <img class="h-72 w-72 rounded-full" src="https://i.pinimg.com/236x/e1/5c/50/e15c50c1757aa45295f5635ec4969f57--long-sleeve-blouses-shirt-blouses.jpg" alt="">
+                </div>
+                {{-- review image end here --}}
+                {{-- review content start here --}}
+                <div class="text-gray-400 my-10 col-span-2 leading-8">
+                    Get involved in our global effort to empower teachers and students through education. We create equitable classrooms by providing teachers with technology and coaching.
+                    Get involved in our global effort to empower teachers and students through education. We create equitable classrooms by providing teachers with technology and coaching.
+                    <div class="mt-20">
+                        <h4 class="font-bold text-green-500 text-xl">Bokhtiar toshar</h4>
+                        <span class="text-gray-500">Brother</span>
+                    </div>
+                </div>
+                
+                {{-- review content end here --}}
+            </div>
+        </div>
+    </section>
+    {{-- what people aobut say end here --}}
+
 </body>
 
 </html>
