@@ -455,6 +455,230 @@
     </section>
     {{-- what people aobut say end here --}}
 
+    {{-- professional tutor start here --}}
+    <section class=" container mx-auto">
+        <h3 class="font-bold text-3xl text-green-500">What people about say us</h3>
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-8">
+            {{-- card start here --}}
+            <div class="mx-auto shadow my-3">
+                <img class="h-48 rounded-md"
+                    src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHV0b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+
+                    <div class="flex items-center justify-between px-3 py-2">
+                        <span class="font-bold">Bokhtiar toshar</span>
+                        <p class="flex items-center gap-1">
+                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> 
+                            <span class="text-gray-400">4.5</span>
+                        </p>
+                    </div>
+
+                    <div class="flex items-center justify-between px-3 text-gray-400 mb-2">
+                        <span class="font-bold">Software eng.</span>
+                        <span>800+ Student</span>
+                    </div>
+                    <hr class="py-1">
+                    <div class="flex items-center justify-between px-3">
+                        <span class="text-gray-400">Price: 23300Tk</span>
+                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                    </div>
+                <br>
+            </div>
+            {{-- card end here --}}
+
+            {{-- card start here --}}
+            <div class="mx-auto shadow my-3">
+                <img class="h-48 rounded-md"
+                    src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHV0b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+
+                    <div class="flex items-center justify-between px-3 py-2">
+                        <span class="font-bold">Bokhtiar toshar</span>
+                        <p class="flex items-center gap-1">
+                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> 
+                            <span class="text-gray-400">4.5</span>
+                        </p>
+                    </div>
+
+                    <div class="flex items-center justify-between px-3 text-gray-400 mb-2">
+                        <span class="font-bold">Software eng.</span>
+                        <span>800+ Student</span>
+                    </div>
+                    <hr class="py-1">
+                    <div class="flex items-center justify-between px-3">
+                        <span class="text-gray-400">Price: 23300Tk</span>
+                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                    </div>
+                <br>
+            </div>
+            {{-- card end here --}}
+
+            {{-- card start here --}}
+            <div class="mx-auto shadow my-3">
+                <img class="h-48 rounded-md"
+                    src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHV0b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+
+                    <div class="flex items-center justify-between px-3 py-2">
+                        <span class="font-bold">Bokhtiar toshar</span>
+                        <p class="flex items-center gap-1">
+                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> 
+                            <span class="text-gray-400">4.5</span>
+                        </p>
+                    </div>
+
+                    <div class="flex items-center justify-between px-3 text-gray-400 mb-2">
+                        <span class="font-bold">Software eng.</span>
+                        <span>800+ Student</span>
+                    </div>
+                    <hr class="py-1">
+                    <div class="flex items-center justify-between px-3">
+                        <span class="text-gray-400">Price: 23300Tk</span>
+                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                    </div>
+                <br>
+            </div>
+            {{-- card end here --}}
+
+            {{-- card start here --}}
+            <div class="mx-auto shadow my-3">
+                <img class="h-48 rounded-md"
+                    src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHV0b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+
+                    <div class="flex items-center justify-between px-3 py-2">
+                        <span class="font-bold">Bokhtiar toshar</span>
+                        <p class="flex items-center gap-1">
+                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> 
+                            <span class="text-gray-400">4.5</span>
+                        </p>
+                    </div>
+
+                    <div class="flex items-center justify-between px-3 text-gray-400 mb-2">
+                        <span class="font-bold">Software eng.</span>
+                        <span>800+ Student</span>
+                    </div>
+                    <hr class="py-1">
+                    <div class="flex items-center justify-between px-3">
+                        <span class="text-gray-400">Price: 23300Tk</span>
+                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                    </div>
+                <br>
+            </div>
+            {{-- card end here --}}
+
+            {{-- card start here --}}
+            <div class="mx-auto shadow my-3">
+                <img class="h-48 rounded-md"
+                    src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHV0b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+
+                    <div class="flex items-center justify-between px-3 py-2">
+                        <span class="font-bold">Bokhtiar toshar</span>
+                        <p class="flex items-center gap-1">
+                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> 
+                            <span class="text-gray-400">4.5</span>
+                        </p>
+                    </div>
+
+                    <div class="flex items-center justify-between px-3 text-gray-400 mb-2">
+                        <span class="font-bold">Software eng.</span>
+                        <span>800+ Student</span>
+                    </div>
+                    <hr class="py-1">
+                    <div class="flex items-center justify-between px-3">
+                        <span class="text-gray-400">Price: 23300Tk</span>
+                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                    </div>
+                <br>
+            </div>
+            {{-- card end here --}}
+
+            {{-- card start here --}}
+            <div class="mx-auto shadow my-3">
+                <img class="h-48 rounded-md"
+                    src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHV0b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+
+                    <div class="flex items-center justify-between px-3 py-2">
+                        <span class="font-bold">Bokhtiar toshar</span>
+                        <p class="flex items-center gap-1">
+                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> 
+                            <span class="text-gray-400">4.5</span>
+                        </p>
+                    </div>
+
+                    <div class="flex items-center justify-between px-3 text-gray-400 mb-2">
+                        <span class="font-bold">Software eng.</span>
+                        <span>800+ Student</span>
+                    </div>
+                    <hr class="py-1">
+                    <div class="flex items-center justify-between px-3">
+                        <span class="text-gray-400">Price: 23300Tk</span>
+                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                    </div>
+                <br>
+            </div>
+            {{-- card end here --}}
+
+            {{-- card start here --}}
+            <div class="mx-auto shadow my-3">
+                <img class="h-48 rounded-md"
+                    src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHV0b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+
+                    <div class="flex items-center justify-between px-3 py-2">
+                        <span class="font-bold">Bokhtiar toshar</span>
+                        <p class="flex items-center gap-1">
+                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> 
+                            <span class="text-gray-400">4.5</span>
+                        </p>
+                    </div>
+
+                    <div class="flex items-center justify-between px-3 text-gray-400 mb-2">
+                        <span class="font-bold">Software eng.</span>
+                        <span>800+ Student</span>
+                    </div>
+                    <hr class="py-1">
+                    <div class="flex items-center justify-between px-3">
+                        <span class="text-gray-400">Price: 23300Tk</span>
+                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                    </div>
+                <br>
+            </div>
+            {{-- card end here --}}
+
+            {{-- card start here --}}
+            <div class="mx-auto shadow my-3">
+                <img class="h-48 rounded-md"
+                    src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHV0b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+
+                    <div class="flex items-center justify-between px-3 py-2">
+                        <span class="font-bold">Bokhtiar toshar</span>
+                        <p class="flex items-center gap-1">
+                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> 
+                            <span class="text-gray-400">4.5</span>
+                        </p>
+                    </div>
+
+                    <div class="flex items-center justify-between px-3 text-gray-400 mb-2">
+                        <span class="font-bold">Software eng.</span>
+                        <span>800+ Student</span>
+                    </div>
+                    <hr class="py-1">
+                    <div class="flex items-center justify-between px-3">
+                        <span class="text-gray-400">Price: 23300Tk</span>
+                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                    </div>
+                <br>
+            </div>
+            {{-- card end here --}}
+        </div>
+    </section>
+    {{-- professional tutor end here --}}
+
 </body>
 
 </html>
