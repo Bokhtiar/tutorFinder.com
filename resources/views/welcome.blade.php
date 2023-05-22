@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
@@ -87,7 +89,8 @@
                 </div>
                 {{-- left side end --}}
                 <div class="col-span-1  py-24">
-                    <img class="rounded-full h-[560px] w-[560px] mx-auto" src="https://thetrainingassociates.com/wp-content/uploads/2019/09/AdobeStock_175567791.jpeg"
+                    <img class="rounded-full h-[560px] w-[560px] mx-auto"
+                        src="https://thetrainingassociates.com/wp-content/uploads/2019/09/AdobeStock_175567791.jpeg"
                         alt="">
                 </div>
             </div>
@@ -96,11 +99,13 @@
     {{-- banner section end --}}
 
     {{-- better learing better result start here --}}
-    <section class="container mx-auto my-12">
+    <section class="container mx-auto my-20">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
             {{-- first grid start here --}}
             <div class="">
-                <img class=" rounded-xl" src="https://tiptopbrain.com/wp-content/uploads/2020/09/student-doing-math-6-tips.jpeg" alt="">
+                <img class=" rounded-xl"
+                    src="https://tiptopbrain.com/wp-content/uploads/2020/09/student-doing-math-6-tips.jpeg"
+                    alt="">
             </div>
             {{-- first grid end here --}}
             {{-- secound grid start here --}}
@@ -110,20 +115,69 @@
                     Online educational platform that fit for every one
                 </p>
                 <p class="text-xl text-gray-400 my-10">
-                    The best online course platform for creating, selling and promoting your online courses. Start monetizing your skills, experiences and your audience.
-                    Engage learners with interactive videos, ebooks, 1:1 & group sessions, assessments, certificates, SCORMs, surveys, and much more.
+                    The best online course platform for creating, selling and promoting your online courses. Start
+                    monetizing your skills, experiences and your audience.
+                    Engage learners with interactive videos, ebooks, 1:1 & group sessions, assessments, certificates,
+                    SCORMs, surveys, and much more.
                 </p>
-                @component('components.primary_button',[
-                    'name'=> 'Explore more about us',
-                    'colorfull' => true
+                @component('components.primary_button', [
+                    'name' => 'Explore more about us',
+                    'colorfull' => true,
                 ])
-                    
                 @endcomponent
             </div>
             {{-- secound grid end here --}}
         </div>
     </section>
     {{-- better learing better result end here --}}
+
+    {{-- counter start here --}}
+    <section class="container mx-auto my-48">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {{-- first counter start here --}}
+            <div class="w-80 h-48 bg-gray-100 rounded text-center">
+                <span class=" rounded-full text-white p-5 bg-green-500 my-6 material-symbols-outlined">
+                    conditions
+                </span>
+                <h3 class="text-3xl text-gray-400 font-bold">Total tutor</h3>
+                <h4 class="text-xl text-gray-400 font-bold">10k +</h4>
+            </div>
+            {{-- first counter end here --}}
+
+            {{-- secound counter start here --}}
+            <div class="w-80 h-48 bg-gray-100 rounded text-center">
+                <span class=" rounded-full text-white p-5 bg-green-500 my-6 material-symbols-outlined">
+                    groups
+                </span>
+                <h3 class="text-3xl text-gray-400 font-bold ">Total student</h3>
+                <h4 class="text-xl text-gray-400 font-bold">10k +</h4>
+            </div>
+            {{-- secound counter end here --}}
+
+            {{-- third counter start here --}}
+            <div class="w-80 h-48 bg-gray-100 rounded text-center">
+                <span class=" rounded-full text-white p-5 bg-green-500 my-6 material-symbols-outlined">
+                    menu_book
+                </span>
+                <h3 class="text-3xl text-gray-400 font-bold">Total Subject</h3>
+                <h4 class="text-xl text-gray-400 font-bold">10k +</h4>
+            </div>
+            {{-- third counter end here --}}
+            
+            {{-- fourth counter start here --}}
+            <div class="w-80 h-48 bg-gray-100 rounded text-center">
+                <span class=" rounded-full text-white p-5 bg-green-500 my-6 material-symbols-outlined">
+                    <span class="material-symbols-outlined">
+                        person
+                        </span>
+                </span>
+                <h3 class="text-3xl text-gray-400 font-bold">Total admin</h3>
+                <h4 class="text-xl text-gray-400 font-bold">10k +</h4>
+            </div>
+            {{-- fourth counter end here --}}
+        </div>
+    </section>
+    {{-- counter end here --}}
 
 </body>
 
