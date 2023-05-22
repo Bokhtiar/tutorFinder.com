@@ -457,8 +457,27 @@
 
     {{-- professional tutor start here --}}
     <section class=" container mx-auto">
-        <h3 class="font-bold text-3xl text-green-500">What people about say us</h3>
-
+        <h3 class="font-bold text-3xl text-green-500">Professional For Guidance</h3>
+        
+        {{-- course  --}}
+        <div class=" my-2">
+            <a class="btn btn-success my-1 gap-2"  href="">All</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">asdfasdfads</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">asdfas</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">asdfasdfads</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">asdffads</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">assdfads</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">asdfasdfads</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">asdfas</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">asdfasdfads</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">asdffads</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">assdfads</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">asdfasdfads</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">asdfas</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">asdfasdfads</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">asdffads</a>
+            <a class="btn btn-outline btn-success my-1 gap-2"  href="">assdfads</a>
+        </div>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-8">
             {{-- card start here --}}
             <div class="mx-auto shadow my-3">
@@ -481,7 +500,7 @@
                     <hr class="py-1">
                     <div class="flex items-center justify-between px-3">
                         <span class="text-gray-400">Price: 23300Tk</span>
-                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                        <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>
                     </div>
                 <br>
             </div>
@@ -508,7 +527,7 @@
                     <hr class="py-1">
                     <div class="flex items-center justify-between px-3">
                         <span class="text-gray-400">Price: 23300Tk</span>
-                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                        <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>
                     </div>
                 <br>
             </div>
@@ -535,7 +554,7 @@
                     <hr class="py-1">
                     <div class="flex items-center justify-between px-3">
                         <span class="text-gray-400">Price: 23300Tk</span>
-                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                        <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>
                     </div>
                 <br>
             </div>
@@ -562,7 +581,7 @@
                     <hr class="py-1">
                     <div class="flex items-center justify-between px-3">
                         <span class="text-gray-400">Price: 23300Tk</span>
-                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                        <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>
                     </div>
                 <br>
             </div>
@@ -589,7 +608,7 @@
                     <hr class="py-1">
                     <div class="flex items-center justify-between px-3">
                         <span class="text-gray-400">Price: 23300Tk</span>
-                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                        <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>
                     </div>
                 <br>
             </div>
@@ -616,7 +635,7 @@
                     <hr class="py-1">
                     <div class="flex items-center justify-between px-3">
                         <span class="text-gray-400">Price: 23300Tk</span>
-                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                        <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>
                     </div>
                 <br>
             </div>
@@ -643,7 +662,7 @@
                     <hr class="py-1">
                     <div class="flex items-center justify-between px-3">
                         <span class="text-gray-400">Price: 23300Tk</span>
-                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                        <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>
                     </div>
                 <br>
             </div>
@@ -670,7 +689,7 @@
                     <hr class="py-1">
                     <div class="flex items-center justify-between px-3">
                         <span class="text-gray-400">Price: 23300Tk</span>
-                        <a class="btn btn-sm btn-success text-white" href="">Book</a>
+                        <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>
                     </div>
                 <br>
             </div>
