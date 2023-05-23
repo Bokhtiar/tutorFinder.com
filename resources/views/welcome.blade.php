@@ -1,71 +1,6 @@
-<!doctype html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite('resources/css/app.css')
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-</head>
-
-<body>
-    {{-- header section start here --}}
-    <section class="container mx-auto py-4">
-        <div class="navbar bg-base-100">
-            <div class="flex-1">
-                <a href="#" class="">
-                    <img class="h-12"
-                        src="https://play-lh.googleusercontent.com/bXqShzaPZQpV1EmdqnmCqLFNfFbidLo8AMJylMhkMqXQLY97yIJV04zWb6YV_JM1tg"
-                        alt="">
-                </a>
-            </div>
-            <div class="flex-none">
-                <ul class="menu menu-horizontal px-1">
-                    <li class="px-2 text-xl font-mono"><a>Home</a></li>
-                    <li class="px-2 text-xl font-mono"><a>About</a></li>
-                    <li class="px-2 text-xl font-mono"><a>Tutor</a></li>
-                    <li class="px-2 text-xl font-mono"><a>Contact Us</a></li>
-                    {{-- <li tabindex="0">
-                        <a>
-                            Parent
-                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                viewBox="0 0 24 24">
-                                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                            </svg>
-                        </a>
-                        <ul class="p-2 bg-base-100">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                    </li> --}}
-                    <div class="dropdown dropdown-end ">
-                        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                            <div class="w-10 rounded-full">
-                                <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWHqFL_XoLC7x1onY_BcwSLskANCrxFYFUxen4UwrqhJeDujbhN70xXCTr4r4Ewc_2lro&usqp=CAU" />
-                            </div>
-                        </label>
-                        <ul tabindex="0"
-                            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li class="px-2 text-xl font-mono">
-                                <a class="justify-between">
-                                    Profile
-                                    <span class="badge">New</span>
-                                </a>
-                            </li>
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
-                        </ul>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </section>
-    {{-- header section end here --}}
-
+@extends('layouts.user.app')
+@section('title', 'Home page')
+@section('content')
     {{-- banner section start --}}
     <section class="bg-gray-200">
         <div class="container mx-auto">
@@ -101,14 +36,12 @@
     {{-- banner section end --}}
 
     {{-- better learing better result start here --}}
-    <section class="container mx-auto my-20"  data-aos="fade-up"
-    data-aos-duration="3000">
+    <section class="container mx-auto my-20" data-aos="fade-up" data-aos-duration="3000">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
             {{-- first grid start here --}}
             <div class="">
                 <img class=" rounded-xl"
-                    src="https://tiptopbrain.com/wp-content/uploads/2020/09/student-doing-math-6-tips.jpeg"
-                    alt="">
+                    src="https://tiptopbrain.com/wp-content/uploads/2020/09/student-doing-math-6-tips.jpeg" alt="">
             </div>
             {{-- first grid end here --}}
             {{-- secound grid start here --}}
@@ -135,9 +68,7 @@
     {{-- better learing better result end here --}}
 
     {{-- counter start here --}}
-    <section class="container mx-auto my-40" data-aos="fade-right"
-    data-aos-offset="300"
-    data-aos-easing="ease-in-sine">
+    <section class="container mx-auto my-40" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             {{-- first counter start here --}}
             <div class="w-80 h-48 bg-gray-100 rounded text-center">
@@ -185,9 +116,7 @@
     {{-- counter end here --}}
 
     {{-- services start here --}}
-    <section class="container mx-auto" data-aos="fade-left"
-    data-aos-offset="500"
-    data-aos-duration="500">
+    <section class="container mx-auto" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
         <h3 class="text-center font-bold text-3xl my-5 text-green-500">All These Services For You</h3>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             {{-- first counter start here --}}
@@ -246,9 +175,7 @@
     {{-- services end here --}}
 
     {{-- top intructor start here --}}
-    <section class="container mx-auto" data-aos="fade-right"
-    data-aos-offset="300"
-    data-aos-easing="ease-in-sine">
+    <section class="container mx-auto" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <h3 class="font-bold text-3xl text-green-500 mt-40 mb-5">Top instructors</h3>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
             {{-- card start here --}}
@@ -262,8 +189,8 @@
                 </p>
                 <div class="px-4 flex items-center justify-between">
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -288,8 +215,8 @@
                 </p>
                 <div class="px-4 flex items-center justify-between">
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -314,8 +241,8 @@
                 </p>
                 <div class="px-4 flex items-center justify-between">
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -340,8 +267,8 @@
                 </p>
                 <div class="px-4 flex items-center justify-between">
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -366,35 +293,8 @@
                 </p>
                 <div class="px-4 flex items-center justify-between">
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <title>First star</title>
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <span class="text-gray-400">4.5</span>
-                    </p>
-                    <span class="text-gray-400">800+ student</span>
-                </div>
-                <br>
-            </div>
-            {{-- card end here --}}
-
-
-            {{-- card start here --}}
-            <div class="mx-auto shadow mt-3">
-                <img class="h-48 rounded-md"
-                    src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHV0b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
-                    alt="">
-                <p class="text-center my-3">
-                    <span class="font-bold">Bokhtiar toshar</span><br>
-                    <span class="text-gray-400">Software eng</span>
-                </p>
-                <div class="px-4 flex items-center justify-between">
-                    <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -420,8 +320,8 @@
                 </p>
                 <div class="px-4 flex items-center justify-between">
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -447,8 +347,35 @@
                 </p>
                 <div class="px-4 flex items-center justify-between">
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>First star</title>
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <span class="text-gray-400">4.5</span>
+                    </p>
+                    <span class="text-gray-400">800+ student</span>
+                </div>
+                <br>
+            </div>
+            {{-- card end here --}}
+
+
+            {{-- card start here --}}
+            <div class="mx-auto shadow mt-3">
+                <img class="h-48 rounded-md"
+                    src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHV0b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <p class="text-center my-3">
+                    <span class="font-bold">Bokhtiar toshar</span><br>
+                    <span class="text-gray-400">Software eng</span>
+                </p>
+                <div class="px-4 flex items-center justify-between">
+                    <p class="flex items-center gap-1">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -473,8 +400,8 @@
                 </p>
                 <div class="px-4 flex items-center justify-between">
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -523,9 +450,7 @@
     {{-- what people aobut say end here --}}
 
     {{-- professional tutor start here --}}
-    <section class=" container mx-auto" data-aos="fade-left"
-    data-aos-offset="500"
-    data-aos-duration="500">
+    <section class=" container mx-auto" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
         <h3 class="font-bold text-3xl text-green-500">Professional For Guidance</h3>
 
         {{-- course  --}}
@@ -557,8 +482,8 @@
                 <div class="flex items-center justify-between px-3 py-2">
                     <span class="font-bold">Bokhtiar toshar</span>
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -590,8 +515,8 @@
                 <div class="flex items-center justify-between px-3 py-2">
                     <span class="font-bold">Bokhtiar toshar</span>
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -623,8 +548,8 @@
                 <div class="flex items-center justify-between px-3 py-2">
                     <span class="font-bold">Bokhtiar toshar</span>
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -656,8 +581,8 @@
                 <div class="flex items-center justify-between px-3 py-2">
                     <span class="font-bold">Bokhtiar toshar</span>
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -689,8 +614,8 @@
                 <div class="flex items-center justify-between px-3 py-2">
                     <span class="font-bold">Bokhtiar toshar</span>
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -722,8 +647,8 @@
                 <div class="flex items-center justify-between px-3 py-2">
                     <span class="font-bold">Bokhtiar toshar</span>
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -755,8 +680,8 @@
                 <div class="flex items-center justify-between px-3 py-2">
                     <span class="font-bold">Bokhtiar toshar</span>
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -788,8 +713,8 @@
                 <div class="flex items-center justify-between px-3 py-2">
                     <span class="font-bold">Bokhtiar toshar</span>
                     <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <title>First star</title>
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -839,9 +764,8 @@
                                 <stop offset="0.54" stop-color="gray" stop-opacity="0.12" />
                                 <stop offset="1" stop-color="gray" stop-opacity="0.1" />
                             </linearGradient>
-                            <pattern id="ad310e25-2b04-44c8-bb7b-982389166780" data-name="New Pattern 3"
-                                width="36.88" height="49.48" patternUnits="userSpaceOnUse"
-                                viewBox="0 0 36.88 49.48">
+                            <pattern id="ad310e25-2b04-44c8-bb7b-982389166780" data-name="New Pattern 3" width="36.88"
+                                height="49.48" patternUnits="userSpaceOnUse" viewBox="0 0 36.88 49.48">
                                 <rect width="36.88" height="49.48" fill="none" />
                                 <path d="M4.33,13.19c4.5,0,4.51-7,0-7s-4.52,7,0,7Z" />
                                 <path d="M4.51,17.16c4.51,0,4.52-7,0-7s-4.51,7,0,7Z" />
@@ -881,8 +805,7 @@
                                 <path
                                     d="M13.28,11l.57,1.32a1,1,0,0,0,1.37.36,1,1,0,0,0,.36-1.37L15,10a1,1,0,0,0-1.37-.36A1,1,0,0,0,13.28,11Z" />
                                 <path d="M18.44,19.33v.19a1,1,0,0,0,2,0v-.19a1,1,0,0,0-2,0Z" />
-                                <path
-                                    d="M20.68,24.93l.19.38c.57,1.15,2.3.14,1.72-1l-.19-.38c-.57-1.15-2.3-.14-1.72,1Z" />
+                                <path d="M20.68,24.93l.19.38c.57,1.15,2.3.14,1.72-1l-.19-.38c-.57-1.15-2.3-.14-1.72,1Z" />
                                 <path
                                     d="M22.13,29.38a2.48,2.48,0,0,0-.84,1.86,1,1,0,0,0,2,0,.56.56,0,0,1,.25-.44,1,1,0,0,0,0-1.42,1,1,0,0,0-1.41,0Z" />
                                 <path
@@ -1023,8 +946,8 @@
                             transform="translate(-52 -162.63)" fill="#667eea" opacity="0.1" />
                         <path
                             d="M716.31,652.89c2.61-4.84-.35-10.76-3.75-15.07s-7.56-8.8-7.47-14.29c.13-7.89,8.51-12.56,15.2-16.74a74.3,74.3,0,0,0,13.65-11,20.13,20.13,0,0,0,4.19-5.62c1.39-3.08,1.35-6.6,1.26-10q-.43-16.89-1.67-33.76"
-                            transform="translate(-52 -162.63)" fill="none" stroke="#3f3d56"
-                            stroke-miterlimit="10" stroke-width="4" />
+                            transform="translate(-52 -162.63)" fill="none" stroke="#3f3d56" stroke-miterlimit="10"
+                            stroke-width="4" />
                         <path
                             d="M750.45,545.85a12.31,12.31,0,0,0-6.15-10.09l-2.76,5.45.09-6.6a12.31,12.31,0,1,0,8.82,11.24Z"
                             transform="translate(-52 -162.63)" fill="#667eea" />
@@ -1050,8 +973,8 @@
                             transform="translate(-52 -162.63)" opacity="0.1" />
                         <path
                             d="M106.31,580.89c2.61-4.84-.35-10.76-3.75-15.07S95,557,95.09,551.53c.13-7.89,8.51-12.56,15.2-16.74a74.3,74.3,0,0,0,13.65-11,20.13,20.13,0,0,0,4.19-5.62c1.39-3.08,1.35-6.6,1.26-10q-.44-16.89-1.67-33.76"
-                            transform="translate(-52 -162.63)" fill="none" stroke="#3f3d56"
-                            stroke-miterlimit="10" stroke-width="4" />
+                            transform="translate(-52 -162.63)" fill="none" stroke="#3f3d56" stroke-miterlimit="10"
+                            stroke-width="4" />
                         <path
                             d="M140.45,473.85a12.31,12.31,0,0,0-6.15-10.09l-2.76,5.45.09-6.6a12.31,12.31,0,1,0,8.82,11.24Z"
                             transform="translate(-52 -162.63)" fill="#667eea" />
@@ -1077,8 +1000,8 @@
                             transform="translate(-52 -162.63)" opacity="0.1" />
                         <path
                             d="M512.52,498.52c-2.61-4.83.35-10.75,3.76-15.06s7.55-8.8,7.46-14.29c-.12-7.9-8.5-12.56-15.2-16.74a74,74,0,0,1-13.64-11,19.78,19.78,0,0,1-4.2-5.61c-1.38-3.09-1.34-6.6-1.26-10q.45-16.89,1.67-33.76"
-                            transform="translate(-52 -162.63)" fill="none" stroke="#3f3d56"
-                            stroke-miterlimit="10" stroke-width="4" />
+                            transform="translate(-52 -162.63)" fill="none" stroke="#3f3d56" stroke-miterlimit="10"
+                            stroke-width="4" />
                         <path
                             d="M478.39,391.49a12.3,12.3,0,0,1,6.14-10.09l2.76,5.45-.08-6.6a12.62,12.62,0,0,1,4.05-.49,12.31,12.31,0,1,1-12.87,11.73Z"
                             transform="translate(-52 -162.63)" fill="#667eea" />
@@ -1159,12 +1082,10 @@
                                 transform="translate(-52 -162.63)" />
                             <path
                                 d="M814.55,650.26s-9.94-.27-12.94-.81c0,.51,0,.81,0,.81-.78.78,13.76,1.18,13.76,1.18a1,1,0,0,1,.54.22C815.38,650.26,814.55,650.26,814.55,650.26Z"
-                                transform="translate(-52 -162.63)"
-                                fill="url(#ad310e25-2b04-44c8-bb7b-982389166780)" />
+                                transform="translate(-52 -162.63)" fill="url(#ad310e25-2b04-44c8-bb7b-982389166780)" />
                             <path
                                 d="M831.85,634.14c-.4-.39-.79-5.89-.79-5.89a1.69,1.69,0,0,1-.67.24c.14,1.66.41,4.21.67,4.47s2,10.22,1.57,14.94,0,4.71,0,4.71-12.75,1.87-15.84.62c0,.17.09.36.12.56.39,2.36,16.51,0,16.51,0s-.4,0,0-4.71S832.24,634.54,831.85,634.14Z"
-                                transform="translate(-52 -162.63)"
-                                fill="url(#ad310e25-2b04-44c8-bb7b-982389166780)" />
+                                transform="translate(-52 -162.63)" fill="url(#ad310e25-2b04-44c8-bb7b-982389166780)" />
                         </g>
                         <path
                             d="M818.9,587.18a5.21,5.21,0,0,0,1.5,1.94,3.36,3.36,0,0,0,1.41.61c-.88.51-1.84.89-2.72,1.4a48.36,48.36,0,0,0-4,3,8.14,8.14,0,0,1-4.59,1.78,5.62,5.62,0,0,0,.64-5.59,5.22,5.22,0,0,1-.7-1.94c0-1.13,1-2,1.93-2.6.75-.51,1.52-1,2.3-1.49.61-.38,1.53-1.18,2.3-1.15s.86.71,1,1.41A11.09,11.09,0,0,0,818.9,587.18Z"
@@ -1219,8 +1140,8 @@
                             transform="translate(-52 -162.63)" opacity="0.1" />
                         <path
                             d="M888.39,577c2.61-4.83-.35-10.76-3.76-15.07s-7.55-8.79-7.46-14.29c.12-7.89,8.5-12.55,15.2-16.74a73.9,73.9,0,0,0,13.64-11,19.93,19.93,0,0,0,4.2-5.61c1.38-3.09,1.34-6.6,1.26-10q-.44-16.9-1.67-33.76"
-                            transform="translate(-52 -162.63)" fill="none" stroke="#3f3d56"
-                            stroke-miterlimit="10" stroke-width="4" />
+                            transform="translate(-52 -162.63)" fill="none" stroke="#3f3d56" stroke-miterlimit="10"
+                            stroke-width="4" />
                         <path
                             d="M922.52,469.93a12.29,12.29,0,0,0-6.14-10.08l-2.76,5.45.08-6.6a12.08,12.08,0,0,0-4.05-.49,12.31,12.31,0,1,0,12.87,11.72Z"
                             transform="translate(-52 -162.63)" fill="#667eea" />
@@ -1247,8 +1168,8 @@
                             transform="translate(-52 -162.63)" opacity="0.1" />
                         <path
                             d="M1047.39,729c2.61-4.83-.35-10.76-3.76-15.07s-7.55-8.79-7.46-14.29c.12-7.89,8.5-12.55,15.2-16.74a73.9,73.9,0,0,0,13.64-11,19.93,19.93,0,0,0,4.2-5.61c1.38-3.09,1.34-6.6,1.26-10q-.43-16.9-1.67-33.76"
-                            transform="translate(-52 -162.63)" fill="none" stroke="#3f3d56"
-                            stroke-miterlimit="10" stroke-width="4" />
+                            transform="translate(-52 -162.63)" fill="none" stroke="#3f3d56" stroke-miterlimit="10"
+                            stroke-width="4" />
                         <path
                             d="M1081.52,621.93a12.29,12.29,0,0,0-6.14-10.08l-2.76,5.45.08-6.6a12.08,12.08,0,0,0-4-.49,12.31,12.31,0,1,0,12.87,11.72Z"
                             transform="translate(-52 -162.63)" fill="#667eea" />
@@ -1376,164 +1297,4 @@
         </div>
     </section>
     {{-- contact us end here --}}
-
-    {{-- footer start here --}}
-    <div class="bg-gray-100 pt-5">
-        <div class=" container   text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
-            <div class="p-5">
-                <h3 class="font-bold text-xl text-green-500">Componentity</h3>
-                <div class="text-base text-gray-500 text-justify">
-                    Education | Definition, Development, History, Types, & Facts ...
-                    Education refers to the discipline that is concerned with methods of teaching and learning in
-                    schools or school-like environments, as opposed to various nonformal and informal means of
-                    socializatio
-                </div>
-            </div>
-            <div class="p-5">
-                <div class="text-sm uppercase text-green-500 font-bold">Resources</div>
-                <a class="my-3 block" href="/#">Documentation <span
-                        class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block"
-                    href="/#">Tutorials <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Support <span
-                        class="text-teal-600 text-xs p-1">New</span></a>
-            </div>
-            <div class="p-5">
-                <div class="text-sm uppercase text-green-500 font-bold">Support</div>
-                <a class="my-3 block" href="/#">Help Center <span
-                        class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Privacy
-                    Policy <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block"
-                    href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a>
-            </div>
-            <div class="p-5">
-                <div class="text-sm uppercase text-green-500 font-bold">Contact us</div>
-                <a class="my-3 block" href="/#">XXX XXXX, Floor 4 San Francisco, CA <span
-                        class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block"
-                    href="/#">contact@company.com <span class="text-teal-600 text-xs p-1"></span></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="bg-gray-100 pt-2">
-        <div
-            class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
-           max-w-screen-lg items-center">
-            <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-                <a href="/#" class="w-6 mx-1">
-                    <svg class="fill-current cursor-pointer text-gray-500 hover:text-green-500" width="100%"
-                        height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                        xmlns:serif="http://www.serif.com/"
-                        style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-                        <path id="Twitter"
-                            d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
-                       5.373,-12 12,-12c6.627,0 12,5.373 12,12Zm-6.465,-3.192c-0.379,0.168
-                       -0.786,0.281 -1.213,0.333c0.436,-0.262 0.771,-0.676
-                       0.929,-1.169c-0.408,0.242 -0.86,0.418 -1.341,0.513c-0.385,-0.411
-                       -0.934,-0.667 -1.541,-0.667c-1.167,0 -2.112,0.945 -2.112,2.111c0,0.166
-                       0.018,0.327 0.054,0.482c-1.754,-0.088 -3.31,-0.929
-                       -4.352,-2.206c-0.181,0.311 -0.286,0.674 -0.286,1.061c0,0.733 0.373,1.379
-                       0.94,1.757c-0.346,-0.01 -0.672,-0.106 -0.956,-0.264c-0.001,0.009
-                       -0.001,0.018 -0.001,0.027c0,1.023 0.728,1.877 1.694,2.07c-0.177,0.049
-                       -0.364,0.075 -0.556,0.075c-0.137,0 -0.269,-0.014 -0.397,-0.038c0.268,0.838
-                       1.048,1.449 1.972,1.466c-0.723,0.566 -1.633,0.904 -2.622,0.904c-0.171,0
-                       -0.339,-0.01 -0.504,-0.03c0.934,0.599 2.044,0.949 3.237,0.949c3.883,0
-                       6.007,-3.217 6.007,-6.008c0,-0.091 -0.002,-0.183 -0.006,-0.273c0.413,-0.298
-                       0.771,-0.67 1.054,-1.093Z">
-                        </path>
-                    </svg>
-                </a>
-                <a href="/#" class="w-6 mx-1">
-                    <svg class="fill-current cursor-pointer text-gray-500 hover:text-green-500" width="100%"
-                        height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                        xmlns:serif="http://www.serif.com/"
-                        style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-                        <path id="Facebook"
-                            d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
-                       5.373,-12 12,-12c6.627,0 12,5.373
-                       12,12Zm-11.278,0l1.294,0l0.172,-1.617l-1.466,0l0.002,-0.808c0,-0.422
-                       0.04,-0.648 0.646,-0.648l0.809,0l0,-1.616l-1.295,0c-1.555,0 -2.103,0.784
-                       -2.103,2.102l0,0.97l-0.969,0l0,1.617l0.969,0l0,4.689l1.941,0l0,-4.689Z">
-                        </path>
-                    </svg>
-                </a>
-                <a href="/#" class="w-6 mx-1">
-                    <svg class="fill-current cursor-pointer text-gray-500 hover:text-green-500" width="100%"
-                        height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                        xmlns:serif="http://www.serif.com/"
-                        style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-                        <g id="Layer_1">
-                            <circle id="Oval" cx="12" cy="12" r="12"></circle>
-                            <path id="Shape"
-                                d="M19.05,8.362c0,-0.062 0,-0.125 -0.063,-0.187l0,-0.063c-0.187,-0.562
-                          -0.687,-0.937 -1.312,-0.937l0.125,0c0,0 -2.438,-0.375 -5.75,-0.375c-3.25,0
-                          -5.75,0.375 -5.75,0.375l0.125,0c-0.625,0 -1.125,0.375
-                          -1.313,0.937l0,0.063c0,0.062 0,0.125 -0.062,0.187c-0.063,0.625 -0.25,1.938
-                          -0.25,3.438c0,1.5 0.187,2.812 0.25,3.437c0,0.063 0,0.125
-                          0.062,0.188l0,0.062c0.188,0.563 0.688,0.938 1.313,0.938l-0.125,0c0,0
-                          2.437,0.375 5.75,0.375c3.25,0 5.75,-0.375 5.75,-0.375l-0.125,0c0.625,0
-                          1.125,-0.375 1.312,-0.938l0,-0.062c0,-0.063 0,-0.125
-                          0.063,-0.188c0.062,-0.625 0.25,-1.937 0.25,-3.437c0,-1.5 -0.125,-2.813
-                          -0.25,-3.438Zm-4.634,3.927l-3.201,2.315c-0.068,0.068 -0.137,0.068
-                          -0.205,0.068c-0.068,0 -0.136,0 -0.204,-0.068c-0.136,-0.068 -0.204,-0.204
-                          -0.204,-0.34l0,-4.631c0,-0.136 0.068,-0.273 0.204,-0.341c0.136,-0.068
-                          0.272,-0.068 0.409,0l3.201,2.316c0.068,0.068 0.136,0.204
-                          0.136,0.34c0.068,0.136 0,0.273 -0.136,0.341Z"
-                                style="fill: rgb(255, 255, 255);"></path>
-                        </g>
-                    </svg>
-                </a>
-                <a href="/#" class="w-6 mx-1">
-                    <svg class="fill-current cursor-pointer text-gray-500 hover:text-green-500" width="100%"
-                        height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                        xmlns:serif="http://www.serif.com/"
-                        style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-                        <path id="Shape"
-                            d="M7.3,0.9c1.5,-0.6 3.1,-0.9 4.7,-0.9c1.6,0 3.2,0.3 4.7,0.9c1.5,0.6 2.8,1.5
-                       3.8,2.6c1,1.1 1.9,2.3 2.6,3.8c0.7,1.5 0.9,3 0.9,4.7c0,1.7 -0.3,3.2
-                       -0.9,4.7c-0.6,1.5 -1.5,2.8 -2.6,3.8c-1.1,1 -2.3,1.9 -3.8,2.6c-1.5,0.7
-                       -3.1,0.9 -4.7,0.9c-1.6,0 -3.2,-0.3 -4.7,-0.9c-1.5,-0.6 -2.8,-1.5
-                       -3.8,-2.6c-1,-1.1 -1.9,-2.3 -2.6,-3.8c-0.7,-1.5 -0.9,-3.1 -0.9,-4.7c0,-1.6
-                       0.3,-3.2 0.9,-4.7c0.6,-1.5 1.5,-2.8 2.6,-3.8c1.1,-1 2.3,-1.9
-                       3.8,-2.6Zm-0.3,7.1c0.6,0 1.1,-0.2 1.5,-0.5c0.4,-0.3 0.5,-0.8 0.5,-1.3c0,-0.5
-                       -0.2,-0.9 -0.6,-1.2c-0.4,-0.3 -0.8,-0.5 -1.4,-0.5c-0.6,0 -1.1,0.2
-                       -1.4,0.5c-0.3,0.3 -0.6,0.7 -0.6,1.2c0,0.5 0.2,0.9 0.5,1.3c0.3,0.4 0.9,0.5
-                       1.5,0.5Zm1.5,10l0,-8.5l-3,0l0,8.5l3,0Zm11,0l0,-4.5c0,-1.4 -0.3,-2.5
-                       -0.9,-3.3c-0.6,-0.8 -1.5,-1.2 -2.6,-1.2c-0.6,0 -1.1,0.2 -1.5,0.5c-0.4,0.3
-                       -0.8,0.8 -0.9,1.3l-0.1,-1.3l-3,0l0.1,2l0,6.5l3,0l0,-4.5c0,-0.6 0.1,-1.1
-                       0.4,-1.5c0.3,-0.4 0.6,-0.5 1.1,-0.5c0.5,0 0.9,0.2 1.1,0.5c0.2,0.3 0.4,0.8
-                       0.4,1.5l0,4.5l2.9,0Z">
-                        </path>
-                    </svg>
-                </a>
-                <a href="/#" class="w-6 mx-1">
-                    <svg class="fill-current cursor-pointer text-gray-500 hover:text-green-500" width="100%"
-                        height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                        xmlns:serif="http://www.serif.com/"
-                        style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-                        <path id="Combined-Shape"
-                            d="M12,24c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12c-6.627,0
-                       -12,5.373 -12,12c0,6.627 5.373,12 12,12Zm6.591,-15.556l-0.722,0c-0.189,0
-                       -0.681,0.208 -0.681,0.385l0,6.422c0,0.178 0.492,0.323
-                       0.681,0.323l0.722,0l0,1.426l-4.675,0l0,-1.426l0.935,0l0,-6.655l-0.163,0l-2.251,8.081l-1.742,0l-2.222,-8.081l-0.168,0l0,6.655l0.935,0l0,1.426l-3.74,0l0,-1.426l0.519,0c0.203,0
-                       0.416,-0.145 0.416,-0.323l0,-6.422c0,-0.177 -0.213,-0.385
-                       -0.416,-0.385l-0.519,0l0,-1.426l4.847,0l1.583,5.704l0.042,0l1.598,-5.704l5.021,0l0,1.426Z">
-                        </path>
-                    </svg>
-                </a>
-            </div>
-
-        </div>
-    </div>
-    {{-- footer end here --}}
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-</body>
-
-</html>
+@endsection
