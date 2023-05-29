@@ -4,15 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Country;
 use Illuminate\Http\Request;
+use App\Services\CountryService;
 
 class CountryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    /* Display a listing of the resource. */
     public function index()
     {
-        //
+        try {
+            $countries = CountryService::findAll();
+            return view('modules.country.index', compact('countries'));
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /**

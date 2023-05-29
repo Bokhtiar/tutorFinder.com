@@ -36,12 +36,6 @@ class VerificationController extends Controller
      */
     public function __construct()
     {
-        if (Auth::check() && Auth::user()->role->id == 1) {
-            $this->redirectTo = route('admin.dashboard');
-        } else {
-            $this->redirectTo = route('user.dashboard');
-        }
-
         $this->middleware('auth');
         $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
