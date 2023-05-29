@@ -13,9 +13,9 @@
 
     {{-- breadCrumbs --}}
     @component('components.breadcrumbs', [
-        'pageTitle' => 'Property List',
+        'pageTitle' => 'Country List',
         'anotherPageIcon' => 'bi bi-plus',
-        'anotherPageUrl' => 'country.create',
+        'anotherPageUrl' => 'country.index',
     ])
     @endcomponent
 
@@ -23,21 +23,21 @@
         <div class="row">
             {{-- table --}}
             <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-                @component('components.table.country')
-                    
+                @component('components.table.country', [
+                    'countries' => @$countries,
+                ])
                 @endcomponent
             </div>
 
             {{-- form --}}
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 @component('components.form.country')
-                    
                 @endcomponent
             </div>
         </div>
     </section>
 
-{{-- js link --}}
+    {{-- js link --}}
 @section('js')
 @endsection
 @endsection
