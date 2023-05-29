@@ -14,11 +14,16 @@
             <tbody>
                 @forelse ($countries as $item)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Brandon Jacob</td>
-                        <td>Designer</td>
-                        <td>28</td>
-                        <td>2016-05-25</td>
+                        <th scope="row">{{ $loop->index + 1 }}</th>
+                        <td>{{ $item->country_name }}</td>
+                        <td class="d-flex items-center gap-2">
+                            <a class="btn btn-sm btn-success" href="@route('country.edit', $item->country_id)"><i class="bi bi-pencil-square"></i></a>
+                            <form action="@route('country.destroy', $item->country_id)" method="POST">
+                                @method('DELETE')
+                                @csrf
+                                <button class="btn btn-sm btn-danger" type="submit"><i class="bi bi-trash"></i></button>
+                            </form>
+                        </td>
                     </tr>
                 @empty
                     <h5 class="text-danger text-center">Data Not Available</h5>
