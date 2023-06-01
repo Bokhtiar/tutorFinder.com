@@ -24,7 +24,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="@route('state.index')">
                         <i class="bi bi-circle"></i><span>Create State</span>
                     </a>
                 </li>

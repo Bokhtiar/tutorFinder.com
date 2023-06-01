@@ -4,8 +4,10 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\StateController;
 
 /* Web Routes */
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,5 +22,4 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'inde
 
 /* country */
 Route::resource('country', CountryController::class);
-Route::resource('state', CountryController::class);
-
+Route::resource('state', StateController::class);

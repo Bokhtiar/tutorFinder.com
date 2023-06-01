@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">Horizontal Form</h5>
+        <h5 class="card-title">Country Form</h5>
 
         <!-- Horizontal Form -->
         @if (@$edit)
