@@ -25,7 +25,7 @@
                 </li>
                 <li>
                     <a href="">
-                        <i class="bi bi-circle"></i><span>Create country</span>
+                        <i class="bi bi-circle"></i><span>Create State</span>
                     </a>
                 </li>
 
