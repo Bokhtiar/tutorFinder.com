@@ -27,11 +27,11 @@ class StateService
         return State::create(StateService::fildResource($request));
     }
 
-    // /* specific resoruce */
-    // public static function findById($id)
-    // {
-    //     return Country::find($id);
-    // }
+    /* specific resoruce */
+    public static function findById($id)
+    {
+        return State::find($id);
+    }
 
     // /* specific resource update */
     // public static function findByIdAndUpdate($id, $request)

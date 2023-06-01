@@ -36,20 +36,21 @@ class StateController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     */
+    /* Display the specified resource. */
     public function show(State $state)
-    {
-        //
-    }
+    {}
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    /* Show the form for editing the specified resource */
     public function edit(State $state)
     {
-        //
+        try {
+            $states = StateService::findAll();
+            $edit = StateService::findById($state);
+            $countries = CountryService::findAll();
+            return view('modules.state.index', compact('states', 'edit', 'countries'))
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
     /**
