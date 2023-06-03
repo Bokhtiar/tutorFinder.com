@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Models\City;
 
-class CountryService
+class CityService
 {
     /* list of resoruce */
     public static function findAll()
@@ -12,19 +12,20 @@ class CountryService
         return City::latest()->get(['city_id', 'city_name', 'state_id']);
     }
 
-    // /* fild resoruce */
-    // public static function fildResource($request)
-    // {
-    //     return array(
-    //         'country_name' => $request->country_name,
-    //     );
-    // }
+    /* fild resoruce */
+    public static function fildResource($request)
+    {
+        return array(
+            'state_id' => $request->state_id,
+            'city_name' => $request->city_name,
+        );
+    }
 
-    // /* store new resoruce */
-    // public static function storeResource($request)
-    // {
-    //     return Country::create(CountryService::fildResource($request));
-    // }
+    /* store new resoruce */
+    public static function storeResource($request)
+    {
+        return City::create(CityService::fildResource($request));
+    }
 
     // /* specific resoruce */
     // public static function findById($id)

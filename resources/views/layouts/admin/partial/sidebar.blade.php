@@ -25,13 +25,13 @@
                 </li>
                 <li>
                     <a href="@route('state.index')">
-                        <i class="bi bi-circle"></i><span>Create State</span>
+                        <i class="bi bi-circle"></i><span>List of State</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="">
-                        <i class="bi bi-circle"></i><span>Create country module</span>
+                    <a href="@route('city.index')">
+                        <i class="bi bi-circle"></i><span>List of City</span>
                     </a>
                 </li>
                 <li>

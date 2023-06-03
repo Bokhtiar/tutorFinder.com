@@ -2,7 +2,7 @@
 @extends('layouts.admin.app')
 
 {{-- title --}}
-@section('title', 'State list')
+@section('title', 'City list')
 
 {{-- css link --}}
 @section('css')
@@ -13,9 +13,9 @@
 
     {{-- breadCrumbs --}}
     @component('components.breadcrumbs', [
-        'pageTitle' => 'State List',
+        'pageTitle' => 'City List',
         'anotherPageIcon' => 'bi bi-plus',
-        'anotherPageUrl' => 'state.index',
+        'anotherPageUrl' => 'city.index',
     ])
     @endcomponent
 
@@ -23,16 +23,16 @@
         <div class="row">
             {{-- table --}}
             <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-                @component('components.table.state', [
-                    'states' => @$states,
+                @component('components.table.city', [
+                    'cities' => @$cities,
                 ])
                 @endcomponent
             </div>
 
             {{-- form --}}
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                @component('components.form.state', [
-                    'countries' => @$countries,
+                @component('components.form.city', [
+                    'states' => @$states,
                     'edit' => @$edit,
                 ])
                 @endcomponent

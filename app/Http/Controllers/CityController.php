@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CityRequest;
 use App\Models\City;
+use App\Services\CityService;
+use App\Services\StateService;
 use Illuminate\Http\Request;
 
 class CityController extends Controller
@@ -11,30 +14,27 @@ class CityController extends Controller
     public function index()
     {
         try {
-            try {
-                
-            } catch (\Throwable $th) {
-                //throw $th;
-            }
+            $cities = CityService::findAll();
+            $states = StateService::findAll();
+            return view('modules.city.index', compact('cities', 'states'));
         } catch (\Throwable $th) {
-            //throw $th;
+            throw $th;
         }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    /* Show the form for creating a new resource */
     public function create()
-    {
-        //
-    }
+    {}
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    /* Store a newly created resource in storage */
+    public function store(CityRequest $request)
     {
-        //
+        try {
+            CityService::storeResource($request);
+            return redirect()->route('city.index');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /**
