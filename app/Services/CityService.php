@@ -27,16 +27,16 @@ class CityService
         return City::create(CityService::fildResource($request));
     }
 
-    // /* specific resoruce */
-    // public static function findById($id)
-    // {
-    //     return Country::find($id);
-    // }
+    /* specific resoruce */
+    public static function findById($id)
+    {
+        return City::find($id);
+    }
 
-    // /* specific resource update */
-    // public static function findByIdAndUpdate($id, $request)
-    // {
-    //     $country = CountryService::findById($id);
-    //     return $country->update(CountryService::fildResource($request));
-    // }
+    /* specific resource update */
+    public static function findByIdAndUpdate($id, $request)
+    {
+        $city = CityService::findById($id);
+        return $city->update(CityService::fildResource($request));
+    }
 }
