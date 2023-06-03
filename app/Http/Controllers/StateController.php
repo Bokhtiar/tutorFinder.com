@@ -23,7 +23,8 @@ class StateController extends Controller
 
     /* Show the form for creating a new resource. */
     public function create()
-    {}
+    {
+    }
 
     /* Store a newly created resource in storage */
     public function store(Request $request)
@@ -38,34 +39,41 @@ class StateController extends Controller
 
     /* Display the specified resource. */
     public function show(State $state)
-    {}
+    {
+    }
 
     /* Show the form for editing the specified resource */
-    public function edit(State $state)
+    public function edit($id)
     {
         try {
             $states = StateService::findAll();
-            $edit = StateService::findById($state);
+            $edit = StateService::findById($id);
             $countries = CountryService::findAll();
-            return view('modules.state.index', compact('states', 'edit', 'countries'))
+            return view('modules.state.index', compact('states', 'edit', 'countries'));
         } catch (\Throwable $th) {
-            //throw $th;
+            throw $th;
         }
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, State $state)
+    /* Update the specified resource in storage. */
+    public function update(Request $request, $id)
     {
-        //
+        try {
+            StateService::findByIdAndUpdate($id, $request);
+            return redirect()->route('state.index');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(State $state)
+    /* Remove the specified resource from storage. */
+    public function destroy($id)
     {
-        //
+        try {
+            StateService::findById($id);
+            return redirect()->route('state.index');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }
