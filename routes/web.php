@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\CityController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CountryController;
@@ -20,9 +20,7 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'inde
 
 /* web auth module route */
 
-/* country */
+/* location */
 Route::resource('country', CountryController::class);
-/* state */
 Route::resource('state', StateController::class);
-/* city */
-// Route::resource('')
+Route::resource('city', CityController::class);
