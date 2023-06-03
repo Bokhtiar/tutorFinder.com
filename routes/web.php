@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\StateController;
+use App\Http\Controllers\VillageController;
 
 /* Web Routes */
 
@@ -24,3 +25,4 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'inde
 Route::resource('country', CountryController::class);
 Route::resource('state', StateController::class);
 Route::resource('city', CityController::class);
+Route::resource('village', VillageController::class);

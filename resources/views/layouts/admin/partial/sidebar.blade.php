@@ -35,8 +35,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <i class="bi bi-circle"></i><span>Create country module</span>
+                    <a href="@route('village.index')">
+                        <i class="bi bi-circle"></i><span>List of Village</span>
                     </a>
                 </li>
             </ul>
