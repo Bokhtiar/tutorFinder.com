@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StateRequest;
 use App\Models\State;
 use Illuminate\Http\Request;
 use App\Services\StateService;
@@ -24,10 +25,11 @@ class StateController extends Controller
 
     /* Show the form for creating a new resource. */
     public function create()
-    {}
+    {
+    }
 
     /* Store a newly created resource in storage */
-    public function store(Request $request)
+    public function store(StateRequest $request)
     {
         
         try {
@@ -40,7 +42,8 @@ class StateController extends Controller
 
     /* Display the specified resource. */
     public function show(State $state)
-    {}
+    {
+    }
 
     /* Show the form for editing the specified resource */
     public function edit($id)
@@ -56,21 +59,24 @@ class StateController extends Controller
     }
 
     /* Update the specified resource in storage. */
-    public function update($id, Request $request)
+    public function update(StateRequest $request, $id)
     {
         try {
-            StateService::findByIdAndUpdate($request, $id);
+            StateService::findByIdAndUpdate($id, $request);
             return redirect()->route('state.index');
         } catch (\Throwable $th) {
             throw $th;
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(State $state)
+    /* Remove the specified resource from storage. */
+    public function destroy($id)
     {
-        //
+        try {
+            StateService::findById($id)->delete();
+            return redirect()->route('state.index');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }

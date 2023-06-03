@@ -9,7 +9,7 @@
             @else
                 <form action="@route('state.store')" method="POST">
         @endif
-        @csrf
+        @csrf 
 
         <section class="row">
 
