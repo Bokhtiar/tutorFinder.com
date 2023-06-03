@@ -56,7 +56,7 @@ class CountryController extends Controller
     }
 
     /* Update the specified resource in storage */
-    public function update(CountryService $request, $id)
+    public function update(CountryRequest $request, $id)
     {
         try {
             CountryService::findByIdAndUpdate($id, $request);

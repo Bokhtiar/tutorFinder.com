@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\State;
-use App\Services\CountryService;
-use App\Services\StateService;
 use Illuminate\Http\Request;
+use App\Services\StateService;
+use App\Services\CountryService;
+use App\Http\Requests\StateRequest;
 
 class StateController extends Controller
 {
@@ -28,6 +29,7 @@ class StateController extends Controller
     /* Store a newly created resource in storage */
     public function store(Request $request)
     {
+        
         try {
             StateService::storeResource($request);
             return redirect()->route('state.index');
@@ -41,24 +43,27 @@ class StateController extends Controller
     {}
 
     /* Show the form for editing the specified resource */
-    public function edit(State $state)
+    public function edit($id)
     {
         try {
             $states = StateService::findAll();
-            $edit = StateService::findById($state);
+            $edit = StateService::findById($id);
             $countries = CountryService::findAll();
-            return view('modules.state.index', compact('states', 'edit', 'countries'))
+            return view('modules.state.index', compact('states', 'edit', 'countries'));
         } catch (\Throwable $th) {
-            //throw $th;
+            throw $th;
         }
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, State $state)
+    /* Update the specified resource in storage. */
+    public function update($id, Request $request)
     {
-        //
+        try {
+            StateService::findByIdAndUpdate($request, $id);
+            return redirect()->route('state.index');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /**

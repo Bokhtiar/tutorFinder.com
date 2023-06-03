@@ -33,10 +33,10 @@ class StateService
         return State::find($id);
     }
 
-    // /* specific resource update */
-    // public static function findByIdAndUpdate($id, $request)
-    // {
-    //     $country = CountryService::findById($id);
-    //     return $country->update(CountryService::fildResource($request));
-    // }
+    /* specific resource update */
+    public static function findByIdAndUpdate($id, $request)
+    {
+        $state = StateService::findById($id);
+        return $state->update(StateService::fildResource($request));
+    }
 }
