@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StateRequest;
 use App\Models\State;
 use App\Services\CountryService;
 use App\Services\StateService;
@@ -27,7 +28,7 @@ class StateController extends Controller
     }
 
     /* Store a newly created resource in storage */
-    public function store(Request $request)
+    public function store(StateRequest $request)
     {
         try {
             StateService::storeResource($request);
@@ -56,7 +57,7 @@ class StateController extends Controller
     }
 
     /* Update the specified resource in storage. */
-    public function update(Request $request, $id)
+    public function update(StateRequest $request, $id)
     {
         try {
             StateService::findByIdAndUpdate($id, $request);
@@ -70,7 +71,7 @@ class StateController extends Controller
     public function destroy($id)
     {
         try {
-            StateService::findById($id);
+            StateService::findById($id)->delete();
             return redirect()->route('state.index');
         } catch (\Throwable $th) {
             throw $th;

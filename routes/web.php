@@ -22,4 +22,7 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'inde
 
 /* country */
 Route::resource('country', CountryController::class);
+/* state */
 Route::resource('state', StateController::class);
+/* city */
+// Route::resource('')
