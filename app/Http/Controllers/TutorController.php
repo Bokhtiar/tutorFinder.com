@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tutor;
+use App\Services\CityService;
+use App\Services\CountryService;
+use App\Services\StateService;
 use App\Services\SubjectService;
+use App\Services\VillageService;
 use Illuminate\Http\Request;
 
 class TutorController extends Controller
@@ -23,7 +27,11 @@ class TutorController extends Controller
     {
         try {
             $subjects = SubjectService::findAll();
-            return view('auth.profile', compact('subjects'));
+            $countries = CountryService::findAll();
+            $states = StateService::findAll();
+            $cities = CityService::findAll();
+            $villages = VillageService::findAll();
+            return view('auth.profile', compact('subjects', 'countries', 'states', 'cities', 'villages'));
         } catch (\Throwable $th) {
             throw $th;
         }

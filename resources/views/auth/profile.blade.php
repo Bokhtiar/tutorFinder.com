@@ -26,8 +26,13 @@
     @elseif(Auth::user()->role_id == 2)
         @component('components.form.tutor_profile', [
             'subjects' => @$subjects,
+            'countries' => @$countries,
+            'cities' => @$cities,
+            'states' => @$states,
+            'villages' => @$villages,
         ])
         @endcomponent
+        
     @elseif(Auth::user()->role_id == 3)
         student
     @endif

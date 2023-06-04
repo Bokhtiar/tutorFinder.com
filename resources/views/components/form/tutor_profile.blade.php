@@ -46,6 +46,7 @@
                         @component('components.input', [
                             'label' => 'Phone number',
                             'name' => 'phone',
+                            'type' => 'number',
                             'placeholder' => 'type here phone number',
                             'required' => true,
                             'value' => @$edit ? @$edit->phone : ' ',
@@ -64,7 +65,7 @@
                 <h3 class="card-title">Skill Section</h3>
                 <div class="row">
                     {{-- Subject  --}}
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                         @component('components.select', [
                             'id' => 'subject_id',
                             'name' => 'subject_id',
@@ -78,7 +79,7 @@
                     </div>
 
                     {{-- tutor hour --}}
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                         @component('components.input', [
                             'label' => 'Tutor hour',
                             'name' => 'tutor_hour',
@@ -90,7 +91,7 @@
                     </div>
 
                     {{-- weekly day work --}}
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                         @component('components.input', [
                             'label' => 'Weekly day',
                             'name' => 'weekly_day',
@@ -102,7 +103,7 @@
                     </div>
 
                     {{-- fee --}}
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                         @component('components.input', [
                             'label' => 'Tution fee',
                             'name' => 'fee',
@@ -118,11 +119,173 @@
         {{-- skill end --}}
 
 
+        {{-- social start --}}
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Social media</h3>
+                <div class="row">
+
+                    {{-- fb --}}
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        @component('components.input', [
+                            'label' => 'Facebook',
+                            'name' => 'fb',
+                            'placeholder' => 'type here facebook',
+                            'required' => false,
+                            'value' => @$edit ? @$edit->fb : '',
+                        ])
+                        @endcomponent
+                    </div>
+
+                    {{-- insta --}}
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        @component('components.input', [
+                            'label' => 'Instagram',
+                            'name' => 'insta',
+                            'placeholder' => 'type here instagram',
+                            'required' => false,
+                            'value' => @$edit ? @$edit->insta : '',
+                        ])
+                        @endcomponent
+                    </div>
+
+                    {{-- linkdin --}}
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        @component('components.input', [
+                            'label' => 'Linkdin',
+                            'name' => 'linkdin',
+                            'placeholder' => 'type here linkdin',
+                            'required' => false,
+                            'value' => @$edit ? @$edit->linkdin : '',
+                        ])
+                        @endcomponent
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- social end --}}
+
+
+        {{-- social start --}}
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Location</h3>
+                <div class="row">
+
+                    {{-- Country  --}}
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        @component('components.select', [
+                            'id' => 'country_id',
+                            'name' => 'country_id',
+                            'resource' => $countries,
+                            'field_id' => 'country_id',
+                            'label' => 'Select country',
+                            'field_name' => 'country_name',
+                            'value' => @$edit ? @$edit->country_id : '',
+                        ])
+                        @endcomponent
+                    </div>
+
+                    {{-- state  --}}
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        @component('components.select', [
+                            'id' => 'state_id',
+                            'name' => 'state_id',
+                            'resource' => $states,
+                            'field_id' => 'state_id',
+                            'label' => 'Select state',
+                            'field_name' => 'state_name',
+                            'value' => @$edit ? @$edit->state_id : '',
+                        ])
+                        @endcomponent
+                    </div>
+
+                    {{-- City  --}}
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        @component('components.select', [
+                            'id' => 'city_id',
+                            'name' => 'city_id',
+                            'resource' => $cities,
+                            'field_id' => 'city_id',
+                            'label' => 'Select city',
+                            'field_name' => 'city_name',
+                            'value' => @$edit ? @$edit->city_id : '',
+                        ])
+                        @endcomponent
+                    </div>
+
+
+                    {{-- villages  --}}
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        @component('components.select', [
+                            'id' => 'village_id',
+                            'name' => 'village_id',
+                            'resource' => $villages,
+                            'field_id' => 'village_id',
+                            'label' => 'Select village',
+                            'field_name' => 'village_name',
+                            'value' => @$edit ? @$edit->village_id : '',
+                        ])
+                        @endcomponent
+                    </div>
+
+                    {{-- textarea  --}}
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        @component('components.textarea',[
+                            'label' => "Address",
+                            'name' => "address",
+                            'placeholder' => "type here address",
+                        ])
+                        @endcomponent
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{-- social end --}}
+
+        {{-- social start --}}
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Bio && image</h3>
+                <div class="row">
+
+                    {{-- Bio --}}
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        @component('components.input', [
+                            'label' => 'Bio',
+                            'name' => 'bio',
+                            'placeholder' => 'type here bio',
+                            'required' => false,
+                            'value' => @$edit ? @$edit->bio : '',
+                        ])
+                        @endcomponent
+                    </div>
+
+                    {{-- Bio --}} 
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        @component('components.input', [
+                            'label' => 'Image',
+                            'name' => 'image',
+                            'placeholder' => 'type here file',
+                            'required' => false,
+                            'value' => @$edit ? @$edit->image : '',
+                        ])
+                        @endcomponent
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- social end --}}
+
+
+
+
         {{-- submit button --}}
         <div class="text-center">
 
             @component('components.submit_button', [
-                'name' => 'subject save',
+                'name' => 'Profile update',
             ])
             @endcomponent
 
