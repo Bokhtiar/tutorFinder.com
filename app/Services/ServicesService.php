@@ -15,14 +15,20 @@ class ServicesService
     }
 
     /* fild resoruce */
-    public static function fildResource($request)
+    public static function fildResource($request, $image = null)
     {
+        
+        if ($request->hasFile('image')) {
+            $path = 'image/service/';
+            $uploadImage =  ImageUpload::Image($request, $path);
+        } else {
+            $uploadImage = $image;
+        }
 
-        $path = 'image/service/';
         return array(
             'title' => $request->title,
             'body' => $request->body,
-            'image' => ImageUpload::Image($request, $path),
+            'image' => $uploadImage,
         );
     }
 
@@ -32,16 +38,17 @@ class ServicesService
         return Services::create(ServicesService::fildResource($request));
     }
 
-    // /* specific resoruce */
-    // public static function findById($id)
-    // {
-    //     return Country::find($id);
-    // }
+    /* specific resoruce */
+    public static function findById($id)
+    {
+        return Services::find($id);
+    }
 
-    // /* specific resource update */
-    // public static function findByIdAndUpdate($id, $request)
-    // {
-    //     $country = CountryService::findById($id);
-    //     return $country->update(CountryService::fildResource($request));
-    // }
+    /* specific resource update */
+    public static function findByIdAndUpdate($id, $request)
+    {
+        $service = ServicesService::findById($id);
+        $image = $service->image;
+        return $service->update(ServicesService::fildResource($request, $image));
+    }
 }
