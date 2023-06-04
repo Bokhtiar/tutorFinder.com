@@ -9,9 +9,6 @@
             </a>
         </li><!-- End Dashboard Nav -->
 
-
-
-
         <!-- Location start -->
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#location-nav" data-bs-toggle="collapse" href="#">
@@ -41,7 +38,17 @@
                 </li>
             </ul>
         </li>
-        <!-- course end -->
+        <!-- location end -->
+
+        <!-- services -->
+        <li class="nav-item">
+            <a class="nav-link" href="@route('services.index')">
+                <i class="bi bi-grid"></i>
+                <span>Services</span>
+            </a>
+        </li>
+        <!-- End services -->
+
 
 
 

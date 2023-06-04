@@ -1,11 +1,13 @@
 <?php
 
-use App\Http\Controllers\CityController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CountryController;
+use App\Http\Controllers\CityController;
 use App\Http\Controllers\StateController;
 use App\Http\Controllers\VillageController;
+use App\Http\Controllers\CountryController;
+use App\Http\Controllers\ServicesController;
+
 
 /* Web Routes */
 
@@ -22,7 +24,10 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'inde
 /* web auth module route */
 
 /* location */
-Route::resource('country', CountryController::class);
-Route::resource('state', StateController::class);
 Route::resource('city', CityController::class);
+Route::resource('state', StateController::class);
+Route::resource('country', CountryController::class);
 Route::resource('village', VillageController::class);
+
+/* services */
+Route::resource('services', ServicesController::class);
