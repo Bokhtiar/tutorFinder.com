@@ -3,7 +3,7 @@ namespace App\Traits;
 use Illuminate\Support\Str;
 
 trait ImageUpload {
-
+ 
     public static function Image($request, $path){
         $image = $request->file('image');
             if ($image) {

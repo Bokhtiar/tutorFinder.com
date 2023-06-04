@@ -18,7 +18,7 @@ class ServicesService
     public static function fildResource($request)
     {
 
-        $path = 'image/service';
+        $path = 'image/service/';
         return array(
             'title' => $request->title,
             'body' => $request->body,

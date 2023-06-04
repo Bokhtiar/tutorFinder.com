@@ -10,6 +10,7 @@
                     <th scope="col">Title</th>
                     <th scope="col">Body</th>
                     <th scope="col">Image</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,12 +19,12 @@
                         <th scope="row">{{ $loop->index + 1 }}</th>
                         <td>{{ $item->title }}</td>
                         <td>{{ $item->body }}</td>
-                        <td>{{ $item->image }}</td>
+                        <td> <img height="30" src="{{asset($item->image)}}" alt=""> </td>
 
                         <td class="d-flex items-center gap-2">
                             <a class="btn btn-sm btn-success" href="@route('services.edit', $item->service_id)"><i
                                     class="bi bi-pencil-square"></i></a>
-                            <form action="@route('services.destroy', $item->services_id)" method="POST">
+                            <form action="@route('services.destroy', $item->service_id)" method="POST">
                                 @method('DELETE')
                                 @csrf
                                 <button class="btn btn-sm btn-danger" type="submit"><i

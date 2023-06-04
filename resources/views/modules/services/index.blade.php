@@ -30,13 +30,12 @@
             </div>
 
             {{-- form --}}
-            {{-- <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                @component('components.form.village', [
-                    'cities' => @$cities,
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                @component('components.form.services', [
                     'edit' => @$edit,
                 ])
                 @endcomponent
-            </div> --}}
+            </div>
         </div>
     </section>
 
