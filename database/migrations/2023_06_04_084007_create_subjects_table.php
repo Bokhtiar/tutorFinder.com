@@ -12,14 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('subjects', function (Blueprint $table) {
-            $table->id();
+            $table->id('subject_id');
+            $table->string('subject_name')->required();
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
+    /* Reverse the migrations. */
     public function down(): void
     {
         Schema::dropIfExists('subjects');
