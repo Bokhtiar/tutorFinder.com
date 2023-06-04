@@ -40,4 +40,5 @@ Route::get('/profile', [App\Http\Controllers\TutorController::class, 'profile'])
 
 /* tutor */
 Route::get('/tutor/singup', [App\Http\Controllers\TutorController::class, 'singup'])->name('tutor.singup');
+Route::post('/tutor/store', [App\Http\Controllers\TutorController::class, 'store'])->name('tutor.store');
 

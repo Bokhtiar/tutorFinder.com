@@ -1,13 +1,13 @@
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">Subject Form</h5>
+        <h5 class="card-title">Tutor profile update</h5>
 
-        <!-- Horizontal Form -->
+        <!-- tutor profile Form -->
         @if (@$edit)
-            <form action="@route('subject.update', @$edit->subject_id)" method="POST">
+            <form action="@route('tutor.update', @$edit->tutor_id)" method="POST">
                 @method('put')
             @else
-                <form action="@route('subject.store')" method="POST">
+                <form action="@route('tutor.store')" method="POST">
         @endif
         @csrf
 
@@ -244,7 +244,7 @@
         </div>
         {{-- social end --}}
 
-        {{-- social start --}}
+        {{-- bio && image --}}
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">Bio && image</h3>

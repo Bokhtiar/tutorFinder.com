@@ -7,6 +7,7 @@ use App\Services\CityService;
 use App\Services\CountryService;
 use App\Services\StateService;
 use App\Services\SubjectService;
+use App\Services\TutorService;
 use App\Services\VillageService;
 use Illuminate\Http\Request;
 
@@ -35,6 +36,13 @@ class TutorController extends Controller
         } catch (\Throwable $th) {
             throw $th;
         }
+    }
+
+
+    /* tutor profile update */
+    public function store(Request $request)
+    {
+        TutorService::storeResource($request);
     }
 
     
