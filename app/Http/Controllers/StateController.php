@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StateRequest;
 use App\Models\State;
 use Illuminate\Http\Request;
 use App\Services\StateService;

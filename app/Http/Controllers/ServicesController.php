@@ -3,25 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Models\Services;
+use App\Services\ServicesService;
 use Illuminate\Http\Request;
 
 class ServicesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    /* Display a listing of the resource */
     public function index()
     {
-        //
+        try {
+            $services = ServicesService::findAll();
+            return view('modules.services.index', compact('services'));
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    /* Show the form for creating a new resource. */
     public function create()
-    {
-        //
-    }
+    {}
 
     /**
      * Store a newly created resource in storage.

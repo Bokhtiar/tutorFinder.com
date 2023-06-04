@@ -10,7 +10,6 @@ use App\Http\Controllers\ServicesController;
 
 
 /* Web Routes */
-
 Route::get('/', function () {
     return view('welcome');
 });
