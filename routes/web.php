@@ -35,4 +35,5 @@ Route::resource('subject', SubjectController::class);
 /* services */
 Route::resource('services', ServicesController::class);
 
-
+/* tutor */
+Route::get('/tutor/singup', [App\Http\Controllers\TutorController::class, 'singup'])->name('tutor.singup');

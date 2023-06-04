@@ -64,6 +64,14 @@
                                 @endif
                             </div>
                         </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-outline-primary" href="@route('tutor.singup')">Tutor singup</a>
+                                <a class="btn btn-outline-primary" href="">Student singup</a>
+                            </div>
+                        </div>
+                        
                     </form>
                 </div>
             </div>
