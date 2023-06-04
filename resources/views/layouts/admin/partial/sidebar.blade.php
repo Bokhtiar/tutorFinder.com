@@ -49,6 +49,15 @@
         </li>
         <!-- End services -->
 
+        <!-- subject -->
+        <li class="nav-item">
+            <a class="nav-link" href="@route('subject.index')">
+                <i class="bi bi-grid"></i>
+                <span>Subject</span>
+            </a>
+        </li>
+        <!-- End subject -->
+
 
 
 

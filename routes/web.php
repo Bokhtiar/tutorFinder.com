@@ -6,6 +6,7 @@ use App\Http\Controllers\CityController;
 use App\Http\Controllers\StateController;
 use App\Http\Controllers\VillageController;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\ServicesController;
 
 
@@ -28,5 +29,10 @@ Route::resource('state', StateController::class);
 Route::resource('country', CountryController::class);
 Route::resource('village', VillageController::class);
 
+/* subject */
+Route::resource('subject', SubjectController::class);
+
 /* services */
 Route::resource('services', ServicesController::class);
+
+
