@@ -35,5 +35,9 @@ Route::resource('subject', SubjectController::class);
 /* services */
 Route::resource('services', ServicesController::class);
 
+/* profile */
+Route::get('/profile', [App\Http\Controllers\TutorController::class, 'profile'])->name('profile');
+
 /* tutor */
 Route::get('/tutor/singup', [App\Http\Controllers\TutorController::class, 'singup'])->name('tutor.singup');
+
