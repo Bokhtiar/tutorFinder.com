@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\TutorEducation;
+use Illuminate\Support\Facades\Auth;
 
 class TutorEducationService
 {
@@ -16,7 +17,7 @@ class TutorEducationService
     public static function fildResource($request)
     {
         return array(
-            'tutor_id' => $request->tutor_id,
+            'tutor_id' => Auth::user()->id,
             'institute_name' => $request->institute_name,
             'degree_name' => $request->degree_name,
             'result' => $request->result,

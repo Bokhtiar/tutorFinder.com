@@ -49,6 +49,15 @@
         </li>
         <!-- End services -->
 
+        <!-- tutor education -->
+        <li class="nav-item">
+            <a class="nav-link" href="@route('tutor-education.index')">
+                <i class="bi bi-grid"></i>
+                <span>Tutor Education</span>
+            </a>
+        </li>
+        <!-- End tutor education -->
+
         <!-- subject -->
         <li class="nav-item">
             <a class="nav-link" href="@route('subject.index')">

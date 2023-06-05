@@ -8,7 +8,7 @@ use App\Http\Controllers\VillageController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\ServicesController;
-
+use App\Http\Controllers\TutorEducationController;
 
 /* Web Routes */
 Route::get('/', function () {
@@ -34,6 +34,9 @@ Route::resource('subject', SubjectController::class);
 
 /* services */
 Route::resource('services', ServicesController::class);
+
+/* tutor education */
+Route::resource('tutor-education', TutorEducationController::class);
 
 /* profile */
 Route::get('/profile', [App\Http\Controllers\TutorController::class, 'profile'])->name('profile');

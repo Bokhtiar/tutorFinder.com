@@ -12,15 +12,15 @@ class TutorEducation extends Model
     protected $table = 'tutor_education';
     protected $primaryKey = 'tutor_education_id';
     protected $fillable = [
-        'tutor_id',
+        'tutor_id', 
         'institute_name',
-        'degree_name',
+        'degree_name', 
         'result',
     ];
 
     /* tutor */
     public function tutor()
     {
-        return $this->belongsTo(Tutor::class, 'tutor_id', 'tutor_id');
+        return $this->belongsTo(User::class);
     }
 }
