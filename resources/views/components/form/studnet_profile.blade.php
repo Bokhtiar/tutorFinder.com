@@ -4,7 +4,7 @@
 
         <!-- tutor profile Form -->
         @if (@$edit)
-            <form action="@route('student.update', @$edit->student_id)" method="POST" enctype="multipart/form-data">
+            <form action="@route('student.profile.update', @$edit->student_id)" method="POST" enctype="multipart/form-data">
                 @method('put')
             @else
                 <form action="@route('student.store')" method="POST" enctype="multipart/form-data">

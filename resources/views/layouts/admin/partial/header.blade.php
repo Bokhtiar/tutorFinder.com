@@ -39,13 +39,23 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-
+            
+                    @if (Auth::user()->role_id == 2)
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="@route('profile')">
+                        <a class="dropdown-item d-flex align-items-center" href="@route('tutor.profile')">
                             <i class="bi bi-person"></i>
                             <span>My Profile</span>
                         </a>
                     </li>
+                    @elseif(Auth::user()->role_id == 3)
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="@route('student.profile')">
+                            <i class="bi bi-person"></i>
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+                    @endif
+                    
                     <li>
                         <hr class="dropdown-divider">
                     </li>

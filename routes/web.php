@@ -39,14 +39,14 @@ Route::resource('services', ServicesController::class);
 /* tutor education */
 Route::resource('tutor-education', TutorEducationController::class);
 
-/* profile */
-Route::get('/profile', [App\Http\Controllers\TutorController::class, 'profile'])->name('profile');
-
 /* tutor */
 Route::get('/tutor/singup', [App\Http\Controllers\TutorController::class, 'singup'])->name('tutor.singup');
 Route::post('/tutor/store', [App\Http\Controllers\TutorController::class, 'store'])->name('tutor.store');
 Route::put('tutor/profile/update/{id}', [App\Http\Controllers\TutorController::class, 'update'])->name('tutor.profile.update');
+Route::get('tutor/profile', [App\Http\Controllers\TutorController::class, 'profile'])->name('tutor.profile');
 
 /* student */
 Route::get('/student/singup', [App\Http\Controllers\StudentController::class, 'singup'])->name('student.singup');
 Route::post('/student/store', [App\Http\Controllers\StudentController::class, 'store'])->name('student.store');
+Route::get('student/profile', [App\Http\Controllers\StudentController::class, 'profile'])->name('student.profile');
+Route::put('student/profile/update/{id}', [App\Http\Controllers\StudentController::class, 'update'])->name('student.profile.update');
