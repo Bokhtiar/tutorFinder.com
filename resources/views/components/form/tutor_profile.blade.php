@@ -11,7 +11,6 @@
         @endif
         @csrf
 
-
         {{-- Soft information start --}}
         <div class="card">
             <div class="card-body">
