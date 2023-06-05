@@ -18,7 +18,7 @@ class TutorController extends Controller
     /* tutor singup page */
     public function singup()
     {
-        try {
+        try { 
             return view('tutor.auth.singup');
         } catch (\Throwable $th) {
             throw $th;
@@ -38,7 +38,7 @@ class TutorController extends Controller
             return view('auth.profile', compact('subjects', 'countries', 'states', 'cities', 'villages', 'edit'));
         } catch (\Throwable $th) {
             throw $th;
-        }
+        } 
     }
 
 

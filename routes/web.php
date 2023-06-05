@@ -19,6 +19,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/logouts', [App\Http\Controllers\DashboardController::class, 'logout'])->name('logouts');
 
 
 /* web auth module route */
@@ -46,3 +47,5 @@ Route::get('/tutor/singup', [App\Http\Controllers\TutorController::class, 'singu
 Route::post('/tutor/store', [App\Http\Controllers\TutorController::class, 'store'])->name('tutor.store');
 Route::put('tutor/profile/update/{id}', [App\Http\Controllers\TutorController::class, 'update'])->name('tutor.profile.update');
 
+/* student */
+Route::get('/student/singup', [App\Http\Controllers\StudentController::class, 'singup'])->name('student.singup');

@@ -42,7 +42,12 @@
                             </a>
                         </li>
                         <li><a>Settings</a></li>
+                        @if (Auth::check())
                         <li><a>Logout</a></li>
+                        @else
+                        <li><a href="@route('login')">Login</a></li>
+                        @endif
+                        
                     </ul>
                 </div>
             </ul>
