@@ -2,10 +2,9 @@
 
 namespace App\Services;
 
-use App\Models\Services;
 use App\Models\Tutor;
 use App\Traits\ImageUpload;
-
+use Illuminate\Support\Facades\Auth;
 
 class TutorService
 {
@@ -18,16 +17,32 @@ class TutorService
     /* fild resoruce */
     public static function fildResource($request, $image = null)
     {
+        
         if ($request->hasFile('image')) {
-            $path = 'image/service/';
+            $path = 'image/tutor/';
             $uploadImage =  ImageUpload::Image($request, $path);
         } else {
             $uploadImage = $image;
         }
 
         return array(
-            'title' => $request->title,
-            'body' => $request->body,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'user_id' => Auth::user()->id,
+            'subject_id' => $request->subject_id,
+            'tutor_hour' => $request->tutor_hour,
+            'weekly_day' => $request->weekly_day,
+            'fee' => $request->fee,
+            'fb' => $request->fb,
+            'insta' => $request->insta,
+            'linkdin' => $request->linkdin,
+            'country_id' => $request->country_id,
+            'state_id' => $request->state_id,
+            'city_id' => $request->city_id,
+            'village_id' => $request->village_id,
+            'address' => $request->address,
+            'bio' => $request->bio,
             'image' => $uploadImage,
         );
     }
@@ -35,21 +50,20 @@ class TutorService
     /* store new resoruce */
     public static function storeResource($request)
     {
-        dd($request->all());
-        return Services::create(ServicesService::fildResource($request));
+        return Tutor::create(TutorService::fildResource($request));
     }
 
-    // /* specific resoruce */
-    // public static function findById($id)
-    // {
-    //     return Services::find($id);
-    // }
+    /* specific resoruce */
+    public static function findById($id)
+    {
+        return Tutor::find($id);
+    }
 
-    // /* specific resource update */
-    // public static function findByIdAndUpdate($id, $request)
-    // {
-    //     $service = ServicesService::findById($id);
-    //     $image = $service->image;
-    //     return $service->update(ServicesService::fildResource($request, $image));
-    // }
+    /* specific resource update */
+    public static function findByIdAndUpdate($id, $request)
+    {
+        $tutor = TutorService::findById($id);
+        $image = $tutor->image;
+        return $tutor->update(TutorService::fildResource($request, $image));
+    }
 }

@@ -25,14 +25,14 @@
         admin
     @elseif(Auth::user()->role_id == 2)
         @component('components.form.tutor_profile', [
-            'subjects' => @$subjects,
-            'countries' => @$countries,
+            'edit' => @$edit,
             'cities' => @$cities,
             'states' => @$states,
+            'subjects' => @$subjects,
             'villages' => @$villages,
+            'countries' => @$countries,
         ])
         @endcomponent
-        
     @elseif(Auth::user()->role_id == 3)
         student
     @endif

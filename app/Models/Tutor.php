@@ -11,10 +11,10 @@ class Tutor extends Model
     protected $table = 'tutors';
     protected $primaryKey = 'tutor_id';
     protected $fillable = [
-        'name', 'email', 'phone',
+        'name', 'email', 'phone', 'user_id',
         'subject_id', 'tutor_hour', 'weekly_day',
         'fee', 'fb', 'insta', 'linkdin',
         'country_id', 'state_id', 'city_id',
         'village_id', 'address', 'bio', 'image' 
-    ];
+    ]; 
 }

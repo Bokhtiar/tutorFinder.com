@@ -4,10 +4,10 @@
 
         <!-- tutor profile Form -->
         @if (@$edit)
-            <form action="@route('tutor.update', @$edit->tutor_id)" method="POST">
+            <form action="@route('tutor.profile.update', @$edit->tutor_id)" method="POST" enctype="multipart/form-data">
                 @method('put')
             @else
-                <form action="@route('tutor.store')" method="POST">
+                <form action="@route('tutor.store')" method="POST" enctype="multipart/form-data">
         @endif
         @csrf
 
@@ -231,10 +231,11 @@
 
                     {{-- textarea  --}}
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        @component('components.textarea',[
-                            'label' => "Address",
-                            'name' => "address",
-                            'placeholder' => "type here address",
+                        @component('components.textarea', [
+                            'label' => 'Address',
+                            'name' => 'address',
+                            'placeholder' => 'type here address',
+                            'value' => @$edit ? @$edit->address : '',
                         ])
                         @endcomponent
                     </div>
@@ -262,12 +263,13 @@
                         @endcomponent
                     </div>
 
-                    {{-- Bio --}} 
+                    {{-- tutor image --}}
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                         @component('components.input', [
-                            'label' => 'Image',
+                            'label' => 'Tutor image',
                             'name' => 'image',
-                            'placeholder' => 'type here file',
+                            'type' => 'file',
+                            'placeholder' => '',
                             'required' => false,
                             'value' => @$edit ? @$edit->image : '',
                         ])
