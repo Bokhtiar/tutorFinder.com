@@ -35,35 +35,41 @@ class TutorEducationController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     */
+    /* Display the specified resource. */
     public function show(TutorEducation $tutorEducation)
+    {}
+
+    /* Show the form for editing the specified resource. */
+    public function edit($id)
     {
-        //
+        try {
+            $edit = TutorEducationService::findById($id);
+            $tutorEducations = TutorEducationService::findAll();
+            return view('tutor.education.index', compact('tutorEducations', 'edit'));
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(TutorEducation $tutorEducation)
+    /* Update the specified resource in storage. */
+    public function update(TutorEducationRequest $request, $id)
     {
-        //
+        try {
+            TutorEducationService::findByIdAndUpdate($id, $request);
+            return redirect()->route('tutor-education.index');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, TutorEducation $tutorEducation)
+    /* Remove the specified resource from storage. */
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(TutorEducation $tutorEducation)
-    {
-        //
+        try {
+            TutorEducationService::findById($id)->delete();
+            return redirect()->route('tutor-education.index');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }

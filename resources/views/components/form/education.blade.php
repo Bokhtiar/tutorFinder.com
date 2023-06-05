@@ -4,7 +4,7 @@
 
         <!-- services Form -->
         @if (@$edit)
-            <form action="@route('tutor-education.update', @$edit->service_id)" method="POST" enctype="multipart/form-data">
+            <form action="@route('tutor-education.update', @$edit->tutor_education_id)" method="POST" enctype="multipart/form-data">
                 @method('put')
             @else
                 <form action="@route('tutor-education.store')" method="POST" enctype="multipart/form-data">

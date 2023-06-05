@@ -39,7 +39,7 @@ class TutorEducationService
     /* specific resource update */
     public static function findByIdAndUpdate($id, $request)
     {
-        $tutorEducation = TutorEducation::findById($id);
-        return $tutorEducation->update(TutorEducation::fildResource($request));
+        $tutorEducation = TutorEducationService::findById($id);
+        return $tutorEducation->update(TutorEducationService::fildResource($request));
     }
 }
