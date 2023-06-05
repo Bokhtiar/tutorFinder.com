@@ -49,3 +49,4 @@ Route::put('tutor/profile/update/{id}', [App\Http\Controllers\TutorController::c
 
 /* student */
 Route::get('/student/singup', [App\Http\Controllers\StudentController::class, 'singup'])->name('student.singup');
+Route::post('/student/store', [App\Http\Controllers\StudentController::class, 'store'])->name('student.store');

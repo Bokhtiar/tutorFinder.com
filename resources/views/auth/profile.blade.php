@@ -34,7 +34,15 @@
         ])
         @endcomponent
     @elseif(Auth::user()->role_id == 3)
-        student
+        @component('components.form.studnet_profile', [
+            'edit' => @$edit,
+            'cities' => @$cities,
+            'states' => @$states,
+            'subjects' => @$subjects,
+            'villages' => @$villages,
+            'countries' => @$countries,
+        ])
+        @endcomponent
     @endif
 
 
