@@ -1,7 +1,8 @@
 <div class="bg-gray-100 pt-5">
     <div class=" container   text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
         <div class="p-5">
-            <h3 class="font-bold text-xl text-green-500">Componentity</h3>
+            
+            <div class="text-sm uppercase text-green-500 font-bold">Componentity</div>
             <div class="text-base text-gray-500 text-justify">
                 Education | Definition, Development, History, Types, & Facts ...
                 Education refers to the discipline that is concerned with methods of teaching and learning in
@@ -10,23 +11,22 @@
             </div>
         </div>
         <div class="p-5">
-            <div class="text-sm uppercase text-green-500 font-bold">Resources</div>
-            <a class="my-3 block" href="/#">Documentation <span
-                    class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block"
-                href="/#">Tutorials <span class="text-teal-600 text-xs p-1"></span></a><a
-                class="my-3 block" href="/#">Support <span
-                    class="text-teal-600 text-xs p-1">New</span></a>
+            <div class="text-sm uppercase text-green-500 font-bold">Quick Link</div>
+            <a class="my-3 block" href="{{url('/')}}#service">Services <span class="text-teal-600 text-xs p-1"></span></a><a
+                class="my-3 block" href="{{url('/')}}#tutor">Tutor <span class="text-teal-600 text-xs p-1"></span></a><a
+                class="my-3 block" href="{{url('/')}}#about">About <span class="text-teal-600 text-xs p-1"></span></a>
+            <a class="my-3 block" href="{{url('/')}}#contact">Contact <span class="text-teal-600 text-xs p-1"></span></a>
         </div>
         <div class="p-5">
             <div class="text-sm uppercase text-green-500 font-bold">Support</div>
-            <a class="my-3 block" href="/#">Help Center <span
-                    class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Privacy
+            <a class="my-3 block" href="/#">Help Center <span class="text-teal-600 text-xs p-1"></span></a><a
+                class="my-3 block" href="/#">Privacy
                 Policy <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block"
                 href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a>
         </div>
         <div class="p-5">
             <div class="text-sm uppercase text-green-500 font-bold">Contact us</div>
-            <a class="my-3 block" href="/#">XXX XXXX, Floor 4 San Francisco, CA <span
+            <a class="my-3 block" href="/#">Daffodil smart city, ashulia, saver, dhaka<span
                     class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block"
                 href="/#">contact@company.com <span class="text-teal-600 text-xs p-1"></span></a>
         </div>
@@ -34,15 +34,13 @@
 </div>
 
 <div class="bg-gray-100 pt-2">
-    <div
-        class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
+    <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
        max-w-screen-lg items-center">
         <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
             <a href="/#" class="w-6 mx-1">
                 <svg class="fill-current cursor-pointer text-gray-500 hover:text-green-500" width="100%"
                     height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                    xmlns:serif="http://www.serif.com/"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
                     style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
                     <path id="Twitter"
                         d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
@@ -65,8 +63,7 @@
             <a href="/#" class="w-6 mx-1">
                 <svg class="fill-current cursor-pointer text-gray-500 hover:text-green-500" width="100%"
                     height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                    xmlns:serif="http://www.serif.com/"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
                     style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
                     <path id="Facebook"
                         d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
@@ -80,8 +77,7 @@
             <a href="/#" class="w-6 mx-1">
                 <svg class="fill-current cursor-pointer text-gray-500 hover:text-green-500" width="100%"
                     height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                    xmlns:serif="http://www.serif.com/"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
                     style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
                     <g id="Layer_1">
                         <circle id="Oval" cx="12" cy="12" r="12"></circle>
@@ -107,8 +103,7 @@
             <a href="/#" class="w-6 mx-1">
                 <svg class="fill-current cursor-pointer text-gray-500 hover:text-green-500" width="100%"
                     height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                    xmlns:serif="http://www.serif.com/"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
                     style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
                     <path id="Shape"
                         d="M7.3,0.9c1.5,-0.6 3.1,-0.9 4.7,-0.9c1.6,0 3.2,0.3 4.7,0.9c1.5,0.6 2.8,1.5
