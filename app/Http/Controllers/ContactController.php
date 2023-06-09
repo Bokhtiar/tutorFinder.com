@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
+use App\Services\ContactService;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -24,12 +26,13 @@ class ContactController extends Controller
     }
 
     /* Store a newly created resource in storage. */
-    public function store(Request $request)
+    public function store(ContactRequest $request)
     {
         try {
-            
+            ContactService::storeResource($request);
+            return redirect('/');
         } catch (\Throwable $th) {
-            //throw $th;
+            throw $th;
         }
     }
 

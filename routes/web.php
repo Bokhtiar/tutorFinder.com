@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\Tutor;
+use App\Services\SubjectService;
+use App\Services\ServicesService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CityController;
@@ -9,9 +12,7 @@ use App\Http\Controllers\CountryController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\TutorEducationController;
-use App\Models\Tutor;
-use App\Services\ServicesService;
-use App\Services\SubjectService;
+
 
 /* Web Routes */
 Route::get('/', function () {
@@ -21,7 +22,7 @@ Route::get('/', function () {
     $tutors = Tutor::inRandomOrder()->limit(20)->get();
     return view('welcome', compact('services', 'top_tutors', 'subjects', 'tutors'));
 });
-Route::get('/contact/store', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
+Route::post('contact/store', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
 
 
 /* web auth route */
