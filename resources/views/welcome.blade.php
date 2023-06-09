@@ -142,41 +142,39 @@
     {{-- top intructor start here --}}
     <section class="container mx-auto" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <a href="#">
-        <h3 class="font-bold text-3xl text-green-500 mt-40 mb-5">Top instructors</h3>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
-            {{-- card start here --}}
-            @forelse ($top_tutors as $item)
-                <div class="mx-auto shadow mt-3">
-                    <img class="h-48 w-72 rounded-md"
-                        src="{{$item->image}}"
-                        alt="">
-                    <p class="text-center my-3">
-                        <span class="font-bold">{{ $item->name }}</span><br>
-                        <span class="text-gray-400">{{ $item->subject ? $item->subject->subject_name : "" }}</span>
-                    </p>
-                    <div class="px-4 flex items-center justify-between">
-                        <p class="flex items-center gap-1">
-                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>First star</title>
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <span class="text-gray-400">4.5</span>
+            <h3 class="font-bold text-3xl text-green-500 mt-40 mb-5">Top instructors</h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+                {{-- card start here --}}
+                @forelse ($top_tutors as $item)
+                    <div class="mx-auto shadow mt-3">
+                        <img class="h-48 w-72 rounded-md" src="{{ $item->image }}" alt="">
+                        <p class="text-center my-3">
+                            <span class="font-bold">{{ $item->name }}</span><br>
+                            <span class="text-gray-400">{{ $item->subject ? $item->subject->subject_name : '' }}</span>
                         </p>
-                        <span class="text-gray-400">{{random_int(1000, 9999)}}+ student</span>
+                        <div class="px-4 flex items-center justify-between">
+                            <p class="flex items-center gap-1">
+                                <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <title>First star</title>
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <span class="text-gray-400">4.5</span>
+                            </p>
+                            <span class="text-gray-400">{{ random_int(1000, 9999) }}+ student</span>
+                        </div>
+                        <br>
                     </div>
-                    <br>
-                </div>
-            @empty
-            @endforelse
+                @empty
+                @endforelse
 
-            {{-- card end here --}}
+                {{-- card end here --}}
 
 
-        </div>
-    </a>
+            </div>
+        </a>
     </section>
     {{-- top intructor end here --}}
 
@@ -188,8 +186,7 @@
                 {{-- review image start here --}}
                 <div class="mx-auto col-span-1">
                     <img class="h-72 w-72 rounded-full"
-                        src="https://sabur.me/images/slider/05c42d8300cc4bea4ffda1ccf540610d.png"
-                        alt="">
+                        src="https://sabur.me/images/slider/05c42d8300cc4bea4ffda1ccf540610d.png" alt="">
                 </div>
                 {{-- review image end here --}}
                 {{-- review content start here --}}
@@ -219,43 +216,41 @@
         <div class=" my-2">
             <a class="btn btn-success my-1 gap-2" href="">All</a>
             @foreach ($subjects as $item)
-            <a class="btn btn-outline btn-success my-1 gap-2" href="">{{ $item->subject_name }}</a>    
+                <a class="btn btn-outline btn-success my-1 gap-2" href="">{{ $item->subject_name }}</a>
             @endforeach
-            
+
         </div>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-8">
             {{-- card start here --}}
             @foreach ($tutors as $item)
-            <div class="mx-auto shadow my-3">
-                <img class="h-48 w-72 rounded-md"
-                    src="{{$item->image}}"
-                    alt="">
+                <div class="mx-auto shadow my-3">
+                    <img class="h-48 w-72 rounded-md" src="{{ $item->image }}" alt="">
 
-                <div class="flex items-center justify-between px-3 py-2">
-                    <span class="font-bold">{{$item->name}}</span>
-                    <p class="flex items-center gap-1">
-                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <title>First star</title>
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <span class="text-gray-400">4.5</span>
-                    </p>
-                </div>
+                    <div class="flex items-center justify-between px-3 py-2">
+                        <span class="font-bold">{{ $item->name }}</span>
+                        <p class="flex items-center gap-1">
+                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <title>First star</title>
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <span class="text-gray-400">4.5</span>
+                        </p>
+                    </div>
 
-                <div class="flex items-center justify-between px-3 text-gray-400 mb-2">
-                    <span class="font-bold">{{ $item->subject ? $item->subject->subject_name : "" }}</span>
-                    <span>{{random_int(1000, 9999)}}+ Student</span>
+                    <div class="flex items-center justify-between px-3 text-gray-400 mb-2">
+                        <span class="font-bold">{{ $item->subject ? $item->subject->subject_name : '' }}</span>
+                        <span>{{ random_int(1000, 9999) }}+ Student</span>
+                    </div>
+                    <hr class="py-1">
+                    <div class="flex items-center justify-between px-3">
+                        <span class="text-gray-400">Fee: {{ $item->fee }}</span>
+                        <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>
+                    </div>
+                    <br>
                 </div>
-                <hr class="py-1">
-                <div class="flex items-center justify-between px-3">
-                    <span class="text-gray-400">Fee: {{$item->fee}}</span>
-                    <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>
-                </div>
-                <br>
-            </div>
             @endforeach
             {{-- card end here --}}
         </div>
@@ -264,8 +259,6 @@
 
     {{-- contact us start here --}}
     <section id="contact">
-
-
         <section class="my-40" data-aos="zoom-in-left">
             <div class="text-center w-full">
 
@@ -800,28 +793,30 @@
                     </div>
                 </div>
                 <div class="">
-                    <div>
-                        <span class="uppercase text-sm text-gray-600 font-bold">Full Name</span>
-                        <input
-                            class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="text" placeholder="">
-                    </div>
-                    <div class="mt-8">
-                        <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
-                        <input
-                            class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="text">
-                    </div>
-                    <div class="mt-8">
-                        <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
-                        <textarea class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                    <div class="mt-8">
-                        <button
-                            class="uppercase text-sm font-bold tracking-wide bg-green-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-                            Send Message
-                        </button>
-                    </div>
+                    <form action="@route('contact.store')">
+                        <div>
+                            <span class="uppercase text-sm text-gray-600 font-bold">Full Name</span>
+                            <input
+                                class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                type="text" placeholder="">
+                        </div>
+                        <div class="mt-8">
+                            <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
+                            <input
+                                class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                type="text">
+                        </div>
+                        <div class="mt-8">
+                            <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
+                            <textarea class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                        </div>
+                        <div class="mt-8">
+                            <button
+                                class="uppercase text-sm font-bold tracking-wide bg-green-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

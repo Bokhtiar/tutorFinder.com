@@ -12,10 +12,8 @@ use App\Http\Controllers\TutorEducationController;
 use App\Models\Tutor;
 use App\Services\ServicesService;
 use App\Services\SubjectService;
-use App\Services\TutorService;
 
 /* Web Routes */
-
 Route::get('/', function () {
     $services = ServicesService::findAll();
     $top_tutors = Tutor::inRandomOrder()->limit(10)->get();
@@ -23,6 +21,8 @@ Route::get('/', function () {
     $tutors = Tutor::inRandomOrder()->limit(20)->get();
     return view('welcome', compact('services', 'top_tutors', 'subjects', 'tutors'));
 });
+Route::get('/contact/store', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
+
 
 /* web auth route */
 Auth::routes();
