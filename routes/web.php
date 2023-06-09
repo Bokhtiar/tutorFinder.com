@@ -11,6 +11,7 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\TutorEducationController;
 use App\Models\Tutor;
 use App\Services\ServicesService;
+use App\Services\SubjectService;
 use App\Services\TutorService;
 
 /* Web Routes */
@@ -18,7 +19,9 @@ use App\Services\TutorService;
 Route::get('/', function () {
     $services = ServicesService::findAll();
     $top_tutors = Tutor::inRandomOrder()->limit(10)->get();
-    return view('welcome', compact('services', 'top_tutors'));
+    $subjects = SubjectService::findAll();
+    $tutors = Tutor::inRandomOrder()->limit(20)->get();
+    return view('welcome', compact('services', 'top_tutors', 'subjects', 'tutors'));
 });
 
 /* web auth route */
