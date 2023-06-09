@@ -9,12 +9,13 @@
         </div>
         <div class="flex-none">
             <ul class="menu menu-horizontal px-1">
-                <li class="px-2 text-xl font-mono"><a>Home</a></li>
-                <li class="px-2 text-xl font-mono"><a>About</a></li>
-                <li class="px-2 text-xl font-mono"><a>Tutor</a></li>
-                <li class="px-2 text-xl font-mono"><a>Contact Us</a></li>
+                <li class="px-2 text-xl font-mono"><a href="{{ url('/') }}">Home</a></li>
+                <li class="px-2 text-xl font-mono"><a href="{{ url('/') }}#about">About</a></li>
+                <li class="px-2 text-xl font-mono"><a href="{{ url('/') }}#tutor">Tutor</a></li>
+                <li class="px-2 text-xl font-mono"><a href="{{ url('/') }}#service">Services</a></li>
+                <li class="px-2 text-xl font-mono"><a href="{{ url('/') }}#contact">Contact Us</a></li>
                 {{-- <li tabindex="0">
-                    <a>
+                    <a> 
                         Parent
                         <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             viewBox="0 0 24 24">
@@ -35,19 +36,18 @@
                     </label>
                     <ul tabindex="0"
                         class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li class="px-2 text-xl font-mono">
-                            <a class="justify-between">
-                                Profile
-                                <span class="badge">New</span>
+                        <li class="text-xl font-mono">
+                            <a class="@route('dashboard')">
+                                Dashboard
+                                <span class="badge">go</span>
                             </a>
                         </li>
-                        <li><a>Settings</a></li>
                         @if (Auth::check())
-                        <li><a>Logout</a></li>
+                            <li><a @route('logouts')>Logout</a></li>
                         @else
-                        <li><a href="@route('login')">Login</a></li>
+                            <li><a href="@route('login')">Login</a></li>
                         @endif
-                        
+
                     </ul>
                 </div>
             </ul>

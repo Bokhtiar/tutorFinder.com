@@ -37,32 +37,35 @@
 
     {{-- better learing better result start here --}}
     <section class="container mx-auto my-20" data-aos="fade-up" data-aos-duration="3000">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {{-- first grid start here --}}
-            <div class="">
-                <img class=" rounded-xl"
-                    src="https://tiptopbrain.com/wp-content/uploads/2020/09/student-doing-math-6-tips.jpeg" alt="">
+        <div id="about" class="">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {{-- first grid start here --}}
+                <div class="">
+                    <img class=" rounded-xl"
+                        src="https://tiptopbrain.com/wp-content/uploads/2020/09/student-doing-math-6-tips.jpeg"
+                        alt="">
+                </div>
+                {{-- first grid end here --}}
+                {{-- secound grid start here --}}
+                <div class="mt-5">
+                    <h3 class=" text-3xl text-green-600">Better learing better result</h3>
+                    <p class="my-10 text-5xl font-bold">
+                        Online educational platform that fit for every one
+                    </p>
+                    <p class="text-xl text-gray-400 my-10">
+                        The best online course platform for creating, selling and promoting your online courses. Start
+                        monetizing your skills, experiences and your audience.
+                        Engage learners with interactive videos, ebooks, 1:1 & group sessions, assessments, certificates,
+                        SCORMs, surveys, and much more.
+                    </p>
+                    @component('components.primary_button', [
+                        'name' => 'Explore more about us',
+                        'colorfull' => true,
+                    ])
+                    @endcomponent
+                </div>
+                {{-- secound grid end here --}}
             </div>
-            {{-- first grid end here --}}
-            {{-- secound grid start here --}}
-            <div class="mt-5">
-                <h3 class=" text-3xl text-green-600">Better learing better result</h3>
-                <p class="my-10 text-5xl font-bold">
-                    Online educational platform that fit for every one
-                </p>
-                <p class="text-xl text-gray-400 my-10">
-                    The best online course platform for creating, selling and promoting your online courses. Start
-                    monetizing your skills, experiences and your audience.
-                    Engage learners with interactive videos, ebooks, 1:1 & group sessions, assessments, certificates,
-                    SCORMs, surveys, and much more.
-                </p>
-                @component('components.primary_button', [
-                    'name' => 'Explore more about us',
-                    'colorfull' => true,
-                ])
-                @endcomponent
-            </div>
-            {{-- secound grid end here --}}
         </div>
     </section>
     {{-- better learing better result end here --}}
@@ -116,7 +119,8 @@
     {{-- counter end here --}}
 
     {{-- services start here --}}
-    <section class="container mx-auto" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
+
+    <section id="service" class="container mx-auto" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
         <h3 class="text-center font-bold text-3xl my-5 text-green-500">All These Services For You</h3>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             {{-- first counter start here --}}
@@ -450,7 +454,7 @@
     {{-- what people aobut say end here --}}
 
     {{-- professional tutor start here --}}
-    <section class=" container mx-auto" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
+    <section id="tutor" class=" container mx-auto" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
         <h3 class="font-bold text-3xl text-green-500">Professional For Guidance</h3>
 
         {{-- course  --}}
@@ -741,7 +745,10 @@
     {{-- professional tutor end here --}}
 
     {{-- contact us start here --}}
-    <section class="my-40" data-aos="zoom-in-left">
+    <section id="contact">
+
+    
+    <section  class="my-40" data-aos="zoom-in-left">
         <div class="text-center w-full">
 
         </div>
@@ -1168,8 +1175,8 @@
                             transform="translate(-52 -162.63)" opacity="0.1" />
                         <path
                             d="M1047.39,729c2.61-4.83-.35-10.76-3.76-15.07s-7.55-8.79-7.46-14.29c.12-7.89,8.5-12.55,15.2-16.74a73.9,73.9,0,0,0,13.64-11,19.93,19.93,0,0,0,4.2-5.61c1.38-3.09,1.34-6.6,1.26-10q-.43-16.9-1.67-33.76"
-                            transform="translate(-52 -162.63)" fill="none" stroke="#3f3d56" stroke-miterlimit="10"
-                            stroke-width="4" />
+                            transform="translate(-52 -162.63)" fill="none" stroke="#3f3d56"
+                            stroke-miterlimit="10" stroke-width="4" />
                         <path
                             d="M1081.52,621.93a12.29,12.29,0,0,0-6.14-10.08l-2.76,5.45.08-6.6a12.08,12.08,0,0,0-4-.49,12.31,12.31,0,1,0,12.87,11.72Z"
                             transform="translate(-52 -162.63)" fill="#667eea" />
@@ -1296,5 +1303,6 @@
             </div>
         </div>
     </section>
+</section>
     {{-- contact us end here --}}
 @endsection
