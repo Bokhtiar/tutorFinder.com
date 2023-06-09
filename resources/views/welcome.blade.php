@@ -216,7 +216,8 @@
         <div class=" my-2">
             <a class="btn btn-success my-1 gap-2" href="">All</a>
             @foreach ($subjects as $item)
-                <a class="btn btn-outline btn-success my-1 gap-2" href="">{{ $item->subject_name }}</a>
+                <a id="subject-ways-tutor" data-value1="{{$item->subject_id}}"
+                    class="btn btn-outline btn-success my-1 gap-2">{{ $item->subject_name }}</a>
             @endforeach
 
         </div>
@@ -809,7 +810,8 @@
                         </div>
                         <div class="mt-8">
                             <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
-                            <textarea class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="message"></textarea>
+                            <textarea class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                name="message"></textarea>
                         </div>
                         <div class="mt-8">
                             <button type="submit"
@@ -823,4 +825,20 @@
         </section>
     </section>
     {{-- contact us end here --}}
+
+    @section('js')
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+        <script>
+            
+            $(document).ready(function(){
+            $('#subject-ways-tutor').click(function(){
+               let v1 = $(this).data("value1")
+               console.log(v1);
+            });
+            });
+        </script>
+    @endsection
 @endsection

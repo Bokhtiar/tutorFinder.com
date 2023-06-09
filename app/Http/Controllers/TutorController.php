@@ -47,7 +47,7 @@ class TutorController extends Controller
     {
         try {
             TutorService::storeResource($request);
-            return redirect()->route('profile');
+            return redirect()->route('dashboard');
         } catch (\Throwable $th) {
             throw $th;
         }
