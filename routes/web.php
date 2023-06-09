@@ -42,6 +42,8 @@ Route::resource('village', VillageController::class);
 
 /* subject */
 Route::resource('subject', SubjectController::class);
+Route::get('/subject-ways-tutor/{id}', [SubjectController::class, 'subject_ways_tutor']);
+
 
 /* services */
 Route::resource('services', ServicesController::class);
@@ -50,6 +52,7 @@ Route::resource('services', ServicesController::class);
 Route::resource('tutor-education', TutorEducationController::class);
 
 /* tutor */
+Route::get('/tutor', [App\Http\Controllers\TutorController::class, 'index']);
 Route::get('/tutor/singup', [App\Http\Controllers\TutorController::class, 'singup'])->name('tutor.singup');
 Route::post('/tutor/store', [App\Http\Controllers\TutorController::class, 'store'])->name('tutor.store');
 Route::put('tutor/profile/update/{id}', [App\Http\Controllers\TutorController::class, 'update'])->name('tutor.profile.update');

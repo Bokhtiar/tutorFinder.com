@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Tutor;
 use App\Models\Subject;
 
 class SubjectService
@@ -38,5 +39,10 @@ class SubjectService
     {
         $Subject = SubjectService::findById($id);
         return $Subject->update(SubjectService::fildResource($request));
+    }
+
+    /* subject ways tutor find */
+    public static function subjectWaysTutor($id){
+       return Tutor::with('subject')->where('subject_id', $id)->get();
     }
 }

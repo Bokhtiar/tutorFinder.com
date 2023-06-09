@@ -11,7 +11,7 @@ class TutorService
     /* list of resoruce */
     public static function findAll()
     {
-        return Tutor::latest()->get();
+        return Tutor::with('subject')->latest()->get();
     }
 
     /* fild resoruce */

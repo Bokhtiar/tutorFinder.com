@@ -74,4 +74,14 @@ class SubjectController extends Controller
             throw $th;
         }
     }
+
+    /* subject ways tutor */
+    public function subject_ways_tutor($id)
+    {
+        $items = SubjectService::subjectWaysTutor($id);
+        return response()->json([
+            'message' => "tutor list",
+            'data' => $items,
+        ],200);
+    }
 }

@@ -214,24 +214,24 @@
 
         {{-- course  --}}
         <div class=" my-2">
-            <a class="btn btn-success my-1 gap-2" href="">All</a>
+            <a class="btn btn-success my-1 gap-2" onclick="all_subject()" >All</a>
             @foreach ($subjects as $item)
-                <a id="subject-ways-tutor" data-value1="{{$item->subject_id}}"
+                <a onclick="subject({{ $item->subject_id }})"
                     class="btn btn-outline btn-success my-1 gap-2">{{ $item->subject_name }}</a>
             @endforeach
 
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-8">
+        <div id="tutorShow" class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-8">
+
             {{-- card start here --}}
-            @foreach ($tutors as $item)
+            {{-- @foreach ($tutors as $item)
                 <div class="mx-auto shadow my-3">
                     <img class="h-48 w-72 rounded-md" src="{{ $item->image }}" alt="">
 
                     <div class="flex items-center justify-between px-3 py-2">
                         <span class="font-bold">{{ $item->name }}</span>
                         <p class="flex items-center gap-1">
-                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <title>First star</title>
                                 <path
                                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
@@ -252,7 +252,7 @@
                     </div>
                     <br>
                 </div>
-            @endforeach
+            @endforeach --}}
             {{-- card end here --}}
         </div>
     </section>
@@ -830,15 +830,122 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-
         <script>
-            
-            $(document).ready(function(){
-            $('#subject-ways-tutor').click(function(){
-               let v1 = $(this).data("value1")
-               console.log(v1);
-            });
-            });
+            let all = ''
+            /* all subject start here */
+                function all_subject()
+                {
+                    $.ajax({
+                    url: '/tutor',
+                    type: 'GET',
+                    dataType: 'Json',
+                    success: function(response) {
+                        console.log(response);
+                        $("#tutorShow").html('')
+                        $.each(response.data, function(key, item) {
+                            $("#tutorShow").append('<div class="mx-auto shadow my-3">\
+                                        <img class="h-48 w-72 rounded-md" src=' + item.image + ' alt="">\
+                                        <div class="flex items-center justify-between px-3 py-2">\
+                                            <span class="font-bold">' + item.name + '</span>\
+                                            <p class="flex items-center gap-1">\
+                                                <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">\
+                                                    <title>First star</title>\
+                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">\
+                                                    </path>\
+                                                </svg>\
+                                                <span class="text-gray-400">4.5</span>\
+                                            </p>\
+                                        </div>\
+                                        <div class="flex items-center justify-between px-3 text-gray-400 mb-2">\
+                                            <span class="font-bold">' + item.subject.subject_name + '</span>\
+                                            <span>' + Math.floor((Math.random() * 1000) + 4) + '+ Student</span>\
+                                        </div>\
+                                        <hr class="">\
+                                        <div class="flex items-center justify-between px-3 py-2">\
+                                            <span class="text-gray-400">Fee: ' + item.fee + ' TK</span>\
+                                            <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>\
+                                        </div>\
+                                        </div>')
+                        })
+                    }
+                })
+                }
+            /* all subject end here */
+            /* all tutor start here*/
+                  $.ajax({
+                    url: '/tutor',
+                    type: 'GET',
+                    dataType: 'Json',
+                    success: function(response) {
+                        console.log(response);
+                        $("#tutorShow").html('')
+                        $.each(response.data, function(key, item) {
+                            $("#tutorShow").append('<div class="mx-auto shadow my-3">\
+                                        <img class="h-48 w-72 rounded-md" src=' + item.image + ' alt="">\
+                                        <div class="flex items-center justify-between px-3 py-2">\
+                                            <span class="font-bold">' + item.name + '</span>\
+                                            <p class="flex items-center gap-1">\
+                                                <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">\
+                                                    <title>First star</title>\
+                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">\
+                                                    </path>\
+                                                </svg>\
+                                                <span class="text-gray-400">4.5</span>\
+                                            </p>\
+                                        </div>\
+                                        <div class="flex items-center justify-between px-3 text-gray-400 mb-2">\
+                                            <span class="font-bold">' + item.subject.subject_name + '</span>\
+                                            <span>' + Math.floor((Math.random() * 1000) + 4) + '+ Student</span>\
+                                        </div>\
+                                        <hr class="">\
+                                        <div class="flex items-center justify-between px-3 py-2">\
+                                            <span class="text-gray-400">Fee: ' + item.fee + ' TK</span>\
+                                            <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>\
+                                        </div>\
+                                        </div>')
+                        })
+                    }
+                })
+                /* all tutor end here*/
+
+                
+            /* subject ways tutor */
+            function subject(id) {
+                $.ajax({
+                    url: '/subject-ways-tutor/' + id,
+                    type: 'GET',
+                    dataType: 'Json',
+                    success: function(response) {
+                        console.log(response);
+                        $("#tutorShow").html('')
+                        $.each(response.data, function(key, item) {
+                            $("#tutorShow").append('<div class="mx-auto shadow my-3">\
+                                        <img class="h-48 w-72 rounded-md" src=' + item.image + ' alt="">\
+                                        <div class="flex items-center justify-between px-3 py-2">\
+                                            <span class="font-bold">' + item.name + '</span>\
+                                            <p class="flex items-center gap-1">\
+                                                <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">\
+                                                    <title>First star</title>\
+                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">\
+                                                    </path>\
+                                                </svg>\
+                                                <span class="text-gray-400">4.5</span>\
+                                            </p>\
+                                        </div>\
+                                        <div class="flex items-center justify-between px-3 text-gray-400 mb-2">\
+                                            <span class="font-bold">' + item.subject.subject_name + '</span>\
+                                            <span>' + Math.floor((Math.random() * 1000) + 4) + '+ Student</span>\
+                                        </div>\
+                                        <hr class="">\
+                                        <div class="flex items-center justify-between px-3 py-2">\
+                                            <span class="text-gray-400">Fee: ' + item.fee + ' TK</span>\
+                                            <a class="btn btn-sm btn-outline btn-success text-white" href="">Book</a>\
+                                        </div>\
+                                        </div>')
+                        })
+                    }
+                })
+            }
         </script>
     @endsection
 @endsection

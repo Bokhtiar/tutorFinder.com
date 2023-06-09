@@ -15,6 +15,19 @@ use Illuminate\Support\Facades\Auth;
 
 class TutorController extends Controller
 {
+    /* list of display tutors */
+    public function index()
+    {
+        try {
+            $items = TutorService::findAll();
+            return response()->json([
+                'message' => "Tutor list",
+                'data' => $items
+            ],200);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
     /* tutor singup page */
     public function singup()
     {
