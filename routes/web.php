@@ -9,10 +9,16 @@ use App\Http\Controllers\CountryController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\TutorEducationController;
+use App\Models\Tutor;
+use App\Services\ServicesService;
+use App\Services\TutorService;
 
 /* Web Routes */
+
 Route::get('/', function () {
-    return view('welcome');
+    $services = ServicesService::findAll();
+    $top_tutors = Tutor::inRandomOrder()->limit(10)->get();
+    return view('welcome', compact('services', 'top_tutors'));
 });
 
 /* web auth route */

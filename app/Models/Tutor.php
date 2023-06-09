@@ -17,4 +17,9 @@ class Tutor extends Model
         'country_id', 'state_id', 'city_id',
         'village_id', 'address', 'bio', 'image' 
     ]; 
+
+    public function subject()
+    {
+        return $this->belongsTo(Subject::class, 'subject_id', 'subject_id');
+    }
 }
