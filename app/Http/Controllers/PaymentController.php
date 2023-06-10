@@ -2,19 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\PaymentRequest;
 use App\Models\Payment;
-use App\Services\PaymentService;
 use Illuminate\Http\Request;
+use App\Services\PaymentService;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\PaymentRequest;
 
 class PaymentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    /* Display a listing of the resource. */
     public function index()
     {
-        //
+        try {
+            if (Auth::user()->role_id == 2) {
+                $payments = PaymentService::findAllTutorRequest();
+            } elseif (Auth::user()->role_id == 3) {
+                $payments = PaymentService::findAllTutorRequestSend();
+            } else {
+                $payments = PaymentService::findAll();
+            }
+            return view('modules.payment.index', compact('payments'));
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /**

@@ -13,6 +13,18 @@ class PaymentService
         return Payment::latest()->get();
     }
 
+    /* list of resoruce for tutor */
+    public static function findAllTutorRequest()
+    {
+        return Payment::where('tutor_id', Auth::id())->get();
+    }
+
+    /* list of resoruce for student */
+    public static function findAllTutorRequestSend()
+    {
+        return Payment::where('user_id', Auth::id())->get();
+    }
+
     /* fild resoruce */
     public static function fildResource($request, $id)
     {

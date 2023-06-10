@@ -49,6 +49,15 @@
         </li>
         <!-- End services -->
 
+        <!-- services -->
+        <li class="nav-item">
+            <a class="nav-link" href="@route('tutor.payment.index')">
+                <i class="bi bi-grid"></i>
+                <span>Book Tutor</span>
+            </a>
+        </li>
+        <!-- End services -->
+
         <!-- tutor education -->
         <li class="nav-item">
             <a class="nav-link" href="@route('tutor-education.index')">

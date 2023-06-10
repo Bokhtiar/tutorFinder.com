@@ -19,4 +19,14 @@ class Payment extends Model
         'payment_number',
         'transection_id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function tutor()
+    {
+        return $this->belongsTo(Tutor::class, 'tutor_id', 'tutor_id');
+    }
 }
