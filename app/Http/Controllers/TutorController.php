@@ -15,6 +15,12 @@ use Illuminate\Support\Facades\Auth;
 
 class TutorController extends Controller
 {
+    /* booking */
+    public function payment($id)
+    {
+        $tutor = TutorService::findById($id);
+        return view('modules.payment.create', compact('tutor'));
+    }
     /* list of display tutors */
     public function index()
     {
@@ -23,7 +29,7 @@ class TutorController extends Controller
             return response()->json([
                 'message' => "Tutor list",
                 'data' => $items
-            ],200);
+            ], 200);
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -31,7 +37,7 @@ class TutorController extends Controller
     /* tutor singup page */
     public function singup()
     {
-        try { 
+        try {
             return view('tutor.auth.singup');
         } catch (\Throwable $th) {
             throw $th;
@@ -51,7 +57,7 @@ class TutorController extends Controller
             return view('auth.profile', compact('subjects', 'countries', 'states', 'cities', 'villages', 'edit'));
         } catch (\Throwable $th) {
             throw $th;
-        } 
+        }
     }
 
 
