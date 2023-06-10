@@ -69,9 +69,9 @@
 
         <!-- testimonial start here -->
         <li class="nav-item">
-            <a class="nav-link" href="@route('')">
+            <a class="nav-link" href="@route('testimonial.index')">
                 <i class="bi bi-grid"></i>
-                <span>Tutor Education</span>
+                <span>Testimonial</span>
             </a>
         </li>
         <!-- End testimonial -->
