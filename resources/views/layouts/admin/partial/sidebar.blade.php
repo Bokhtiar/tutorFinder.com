@@ -67,6 +67,15 @@
         </li>
         <!-- End tutor education -->
 
+        <!-- testimonial start here -->
+        <li class="nav-item">
+            <a class="nav-link" href="@route('')">
+                <i class="bi bi-grid"></i>
+                <span>Tutor Education</span>
+            </a>
+        </li>
+        <!-- End testimonial -->
+
         <!-- subject -->
         <li class="nav-item">
             <a class="nav-link" href="@route('subject.index')">

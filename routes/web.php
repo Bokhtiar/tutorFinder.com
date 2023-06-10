@@ -11,10 +11,12 @@ use App\Http\Controllers\VillageController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\TutorEducationController;
 
 
 /* Web Routes */
+
 Route::get('/', function () {
     $services = ServicesService::findAll();
     $top_tutors = Tutor::inRandomOrder()->limit(10)->get();
@@ -47,6 +49,9 @@ Route::get('/subject-ways-tutor/{id}', [SubjectController::class, 'subject_ways_
 
 /* services */
 Route::resource('services', ServicesController::class);
+
+/* testimonial */
+Route::resource('testimonial', TestimonialController::class);
 
 /* tutor education */
 Route::resource('tutor-education', TutorEducationController::class);
