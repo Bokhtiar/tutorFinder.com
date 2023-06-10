@@ -78,4 +78,18 @@ class TestimonialController extends Controller
             throw $th;
         }
     }
+
+    /* testimonial slider */
+    public function testimonial_slider()
+    {
+        try {
+            $slider = TestimonialService::findAll();
+            return response()->json([
+                'message' => 'Testimonial slider',
+                'data' => $slider,
+            ]);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
 }

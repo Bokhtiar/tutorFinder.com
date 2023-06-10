@@ -52,6 +52,7 @@ Route::resource('services', ServicesController::class);
 
 /* testimonial */
 Route::resource('testimonial', TestimonialController::class);
+Route::get('testimonial-slider', [TestimonialController::class, 'testimonial_slider']);
 
 /* tutor education */
 Route::resource('tutor-education', TutorEducationController::class);

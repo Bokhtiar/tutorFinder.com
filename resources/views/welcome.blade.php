@@ -182,7 +182,9 @@
     <section class="bg-gray-100" data-aos="zoom-in">
         <div class="container mx-auto my-40">
             <h3 class="font-bold text-3xl text-green-500 text-center pt-16  my-24">What people about say us</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 px-72">
+        
+            
+            <div id="slider" class="grid grid-cols-1 md:grid-cols-3 px-72">
                 {{-- review image start here --}}
                 <div class="mx-auto col-span-1">
                     <img class="h-72 w-72 rounded-full"
@@ -203,6 +205,7 @@
 
                 {{-- review content end here --}}
             </div>
+            <span onclick="testimonial_slider()">Next</span>
         </div>
     </section>
     {{-- what people aobut say end here --}}
@@ -831,7 +834,28 @@
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
         <script>
-            let all = ''
+
+            
+            /* testimonial slider */
+            function testimonial_slider()
+            {
+                
+                $.ajax({
+                    url: '/testimonial-slider',
+                    type: 'GET',
+                    dataType: 'Json',
+                    success: function(response) {
+                        console.log(response);
+                        $("#slider").html('')
+                        $.each(response.data, function(key, item) {
+                            $("#slider").append('<div class="mx-auto col-span-1">\
+                    <img class="h-72 w-72 rounded-full" src='+ item.image+' alt="">\
+                </div>')
+                        })
+                    }
+                })
+            }
+
             /* all subject start here */
                 function all_subject()
                 {
