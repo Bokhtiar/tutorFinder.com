@@ -11,6 +11,7 @@
             </ul>
         </div>
     </section>
+
     <section class="md:w-[650px] mx-auto ">
         <div class="grid grid-cols-1 md:grid-cols-2">
             <div class=" col-span-1 my-auto float-right">
@@ -47,7 +48,7 @@
                         src="https://play-lh.googleusercontent.com/bXqShzaPZQpV1EmdqnmCqLFNfFbidLo8AMJylMhkMqXQLY97yIJV04zWb6YV_JM1tg"
                         alt="">
 
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('tutor/payment') }}">
                         @csrf
                         <input type="hidden" name="role_id" value="2" id="">
                         {{-- payment amount --}}
