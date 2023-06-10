@@ -863,7 +863,7 @@
                                         <hr class="">\
                                         <div class="flex items-center justify-between px-3 py-2">\
                                             <span class="text-gray-400">Fee: ' + item.fee + ' TK</span>\
-                                            <a class="btn btn-sm btn-outline btn-success text-white" href="/tutor/payment/'+item.tutor_id+'" >Book</a>\
+                                            <a class="btn btn-sm btn-outline btn-success text-white" href="/tutor/payment/create/'+item.tutor_id+'" >Book</a>\
                                         </div>\
                                         </div>')
                         })
@@ -900,7 +900,7 @@
                                         <hr class="">\
                                         <div class="flex items-center justify-between px-3 py-2">\
                                             <span class="text-gray-400">Fee: ' + item.fee + ' TK</span>\
-                                            <a class="btn btn-sm btn-outline btn-success text-white" href="/tutor/payment/'+item.tutor_id+'">Book</a>\
+                                            <a class="btn btn-sm btn-outline btn-success text-white" href="/tutor/payment/create/'+item.tutor_id+'">Book</a>\
                                         </div>\
                                         </div>')
                         })
@@ -939,7 +939,7 @@
                                         <hr class="">\
                                         <div class="flex items-center justify-between px-3 py-2">\
                                             <span class="text-gray-400">Fee: ' + item.fee + ' TK</span>\
-                                            <a class="btn btn-sm btn-outline btn-success text-white" href="/tutor/payment/'+item.tutor_id+'">Book</a>\
+                                            <a class="btn btn-sm btn-outline btn-success text-white" href="/tutor/payment/create/'+item.tutor_id+'">Book</a>\
                                         </div>\
                                         </div>')
                         })

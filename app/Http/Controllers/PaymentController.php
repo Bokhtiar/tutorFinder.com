@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PaymentRequest;
 use App\Models\Payment;
+use App\Services\PaymentService;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
@@ -26,9 +28,14 @@ class PaymentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(PaymentRequest $request, $id)
     {
-        //
+        try {
+            PaymentService::storeResource($request, $id);
+            return redirect('dashboard');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /**

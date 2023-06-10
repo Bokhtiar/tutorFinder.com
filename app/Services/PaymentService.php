@@ -14,13 +14,13 @@ class PaymentService
     }
 
     /* fild resoruce */
-    public static function fildResource($request)
+    public static function fildResource($request, $id)
     {
 
         return array(
             'user_id' => Auth::id(),
             'amount' => $request->amount,
-            'tutor_id' => $request->tutor_id,
+            'tutor_id' => $id,
             'payment_name' => $request->payment_name,
             'payment_number' => $request->payment_number,
             'transection_id' => $request->transection_id,
@@ -28,9 +28,9 @@ class PaymentService
     }
 
     /* store new resoruce */
-    public static function storeResource($request)
+    public static function storeResource($request, $id)
     {
-        return Payment::create(PaymentService::fildResource($request));
+        return Payment::create(PaymentService::fildResource($request, $id));
     }
 
     /* specific resoruce */

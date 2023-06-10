@@ -34,7 +34,7 @@
                                 </svg>
                                 <span class="text-gray-400">4.5</span>
                             </p>
-                            <span class="text-gray-400">{{ random_int(1000, 9999) }}+ student</span>
+                            <span class="text-gray-400">Fee: {{ $tutor->fee }}</span>
                         </div>
                         <br>
                     </div>
@@ -48,13 +48,13 @@
                         src="https://play-lh.googleusercontent.com/bXqShzaPZQpV1EmdqnmCqLFNfFbidLo8AMJylMhkMqXQLY97yIJV04zWb6YV_JM1tg"
                         alt="">
 
-                    <form method="POST" action="{{ route('tutor/payment') }}">
+                    <form method="POST" action="@route('tutor.payment', $tutor->tutor_id)">
                         @csrf
-                        <input type="hidden" name="role_id" value="2" id="">
+                        <input type="hidden" name="tutor_id" value="{{$tutor->tutor_id}}" id="">
                         {{-- payment amount --}}
                         <div class="my-4">
-                            <label for="">Total Amount</label><br>
-                            <input name="amount" type="number" placeholder="amount"
+                            <label for="" class=" ">Total Amount <span class="bg-green-400 px-2 rounded-full text-white">{{ $tutor->fee }} Tk</span> </label><br>
+                            <input name="amount" value="{{$tutor->fee}}" type="number" placeholder="amount"
                                 class="input input-bordered w-full " />
 
                             @error('amount')
