@@ -26,7 +26,7 @@
                 </div>
                 {{-- left side end --}}
                 <div class="col-span-1  py-24">
-                    <img class="rounded-full h-[560px] w-[560px] mx-auto"
+                    <img class="rounded-full h-[460px] w-[460px]  mx-auto"
                         src="https://thetrainingassociates.com/wp-content/uploads/2019/09/AdobeStock_175567791.jpeg"
                         alt="">
                 </div>
@@ -36,7 +36,7 @@
     {{-- banner section end --}}
 
     {{-- better learing better result start here --}}
-    <section class="container mx-auto my-20" data-aos="fade-up" data-aos-duration="3000">
+    <section class="container mx-auto my-20" data-aos="zoom-in-down">
         <div id="about" class="">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {{-- first grid start here --}}
@@ -71,7 +71,8 @@
     {{-- better learing better result end here --}}
 
     {{-- counter start here --}}
-    <section class="container mx-auto my-40" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <section class="container mx-auto my-20" data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom" >
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             {{-- first counter start here --}}
             <div class="w-80 h-48 bg-gray-100 rounded text-center">
@@ -119,8 +120,8 @@
     {{-- counter end here --}}
 
     {{-- services start here --}}
-    <section id="service" class="container mx-auto" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
-        <h3 class="text-center font-bold text-3xl my-5 text-green-500">All These Services For You</h3>
+    <section id="service" class="container mx-auto my-20">
+        
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             {{-- services start here --}}
             @forelse ($services as $item)
@@ -140,9 +141,9 @@
     {{-- services end here --}}
 
     {{-- top intructor start here --}}
-    <section class="container mx-auto" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <section class="container mx-auto my-20"  data-aos="zoom-in" >
         <a href="#">
-            <h3 class="font-bold text-3xl text-green-500 mt-40 mb-5">Top instructors</h3>
+            <h3 class="font-bold text-3xl text-green-500  mb-5">Top instructors</h3>
             <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
                 {{-- card start here --}}
                 @forelse ($top_tutors as $item)
@@ -179,8 +180,9 @@
     {{-- top intructor end here --}}
 
     {{-- what people aobut say start here --}}
-    <section class="bg-gray-100" data-aos="zoom-in">
-        <div class="container mx-auto my-40">
+    <section class="bg-gray-100" data-aos="fade-up"
+    data-aos-anchor-placement="top-center">
+        <div class="container mx-auto my-20">
             <h3 class="font-bold text-3xl text-green-500 text-center pt-16  my-24">What people about say us</h3>
 
 
@@ -223,7 +225,9 @@
     {{-- what people aobut say end here --}}
 
     {{-- professional tutor start here --}}
-    <section id="tutor" class=" container mx-auto" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
+    <section id="tutor" class=" container mx-auto my-20" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500" >
         <h3 class="font-bold text-3xl text-green-500">Professional For Guidance</h3>
 
         {{-- course  --}}
@@ -273,13 +277,13 @@
     {{-- professional tutor end here --}}
 
     {{-- contact us start here --}}
-    <section id="contact">
-        <section class="my-40" data-aos="zoom-in-left">
+    <section id="contact" class=" container mx-auto" >
+        <section class="my-20" data-aos="zoom-in-left">
             <div class="text-center w-full">
 
             </div>
             <div
-                class=" container mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
+                class=" container mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12  py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
                 <div class="flex flex-col justify-between">
                     <div>
                         <h2 class="font-bold text-3xl text-green-500">Lets talk about everything!</h2>

@@ -35,7 +35,7 @@
 
 <div class="bg-gray-100 pt-2">
     <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
-       max-w-screen-lg items-center">
+        items-center">
         <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
             <a href="/#" class="w-6 mx-1">
                 <svg class="fill-current cursor-pointer text-gray-500 hover:text-green-500" width="100%"
