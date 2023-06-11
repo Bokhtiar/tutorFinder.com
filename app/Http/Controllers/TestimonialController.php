@@ -83,10 +83,10 @@ class TestimonialController extends Controller
     public function testimonial_slider()
     {
         try {
-            $slider = TestimonialService::findAll();
+            $item = TestimonialService::slider();
             return response()->json([
-                'message' => 'Testimonial slider',
-                'data' => $slider,
+                'message' => "Slider list",
+                'data' => $item
             ]);
         } catch (\Throwable $th) {
             throw $th;

@@ -182,17 +182,17 @@
     <section class="bg-gray-100" data-aos="zoom-in">
         <div class="container mx-auto my-40">
             <h3 class="font-bold text-3xl text-green-500 text-center pt-16  my-24">What people about say us</h3>
-        
-            
-            <div id="slider" class="grid grid-cols-1 md:grid-cols-3 px-72">
-                {{-- review image start here --}}
+
+
+            <div id="slider" class="">
+                {{-- review image start here
                 <div class="mx-auto col-span-1">
                     <img class="h-72 w-72 rounded-full"
                         src="https://sabur.me/images/slider/05c42d8300cc4bea4ffda1ccf540610d.png" alt="">
                 </div>
                 {{-- review image end here --}}
                 {{-- review content start here --}}
-                <div class="text-gray-400 my-10 col-span-2 leading-8">
+                {{-- <div class="text-gray-400 my-10 col-span-2 leading-8">
                     Get involved in our global effort to empower teachers and students through education. We create
                     equitable classrooms by providing teachers with technology and coaching.
                     Get involved in our global effort to empower teachers and students through education. We create
@@ -201,23 +201,34 @@
                         <h4 class="font-bold text-green-500 text-xl">Md. Sabur Khan</h4>
                         <span class="text-gray-500">Chairman of Daffodil International University</span>
                     </div>
-                </div>
+                </div> --}}
 
                 {{-- review content end here --}}
             </div>
-            <span onclick="testimonial_slider()">Next</span>
+            <div class="text-center pb-7">
+                <button onclick="testimonial_slider()"><span class="material-symbols-outlined">
+                        chevron_left
+                    </span></button>
+                <span onclick="testimonial_slider()" class="material-symbols-outlined">
+                    more_horiz
+                </span>
+                <button onclick="testimonial_slider()">
+                    <span class="material-symbols-outlined">
+                        chevron_right
+                    </span>
+                </button>
+            </div>
         </div>
     </section>
     {{-- what people aobut say end here --}}
 
     {{-- professional tutor start here --}}
-    <section id="tutor" class=" container mx-auto" data-aos="fade-left" data-aos-offset="500"
-        data-aos-duration="500">
+    <section id="tutor" class=" container mx-auto" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
         <h3 class="font-bold text-3xl text-green-500">Professional For Guidance</h3>
 
         {{-- course  --}}
         <div class=" my-2">
-            <a class="btn btn-success my-1 gap-2" onclick="all_subject()" >All</a>
+            <a class="btn btn-success my-1 gap-2" onclick="all_subject()">All</a>
             @foreach ($subjects as $item)
                 <a onclick="subject({{ $item->subject_id }})"
                     class="btn btn-outline btn-success my-1 gap-2">{{ $item->subject_name }}</a>
@@ -834,32 +845,59 @@
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
         <script>
+            /* testimonial  */
+            $.ajax({
+                    url: '/testimonial-slider',
+                    type: 'GET',
+                    dataType: 'Json',
+                    success: function(response) {
+                        let item = response.data
+                        $("#slider").html('')
+                        $("#slider").append('<div class="grid grid-cols-1 md:grid-cols-3 px-72 gap-4"> \
+                                                     <div class="mx-auto col-span-1">\
+                                                    <img class="h-72 w-72 rounded-full" src=' + item.image + ' alt="">\
+                                                </div>\
+                                                <div class="text-gray-400 my-10 col-span-2 leading-8">\
+                                                    <span>' + item.body + '</span>\
+                                                    <div class="mt-20">\
+                                                        <h4 class="font-bold text-green-500 text-xl">' + item.name + '</h4>\
+                                                        <span class="text-gray-500">' + item.designation + '</span>\
+                                                    </div>\
+                                                </div>\
+                                            </div>')
 
-            
+                    }
+                })
             /* testimonial slider */
-            function testimonial_slider()
-            {
-                
+            function testimonial_slider() {
                 $.ajax({
                     url: '/testimonial-slider',
                     type: 'GET',
                     dataType: 'Json',
                     success: function(response) {
-                        console.log(response);
+                        console.log(response.data);
+                        let item = response.data
                         $("#slider").html('')
-                        $.each(response.data, function(key, item) {
-                            $("#slider").append('<div class="mx-auto col-span-1">\
-                    <img class="h-72 w-72 rounded-full" src='+ item.image+' alt="">\
-                </div>')
-                        })
+                        $("#slider").append('<div class="grid grid-cols-1 md:grid-cols-3 px-72 gap-4"> \
+                                                     <div class="mx-auto col-span-1">\
+                                                    <img class="h-72 w-72 rounded-full" src=' + item.image + ' alt="">\
+                                                </div>\
+                                                <div class="text-gray-400 my-10 col-span-2 leading-8">\
+                                                    <span>' + item.body + '</span>\
+                                                    <div class="mt-20">\
+                                                        <h4 class="font-bold text-green-500 text-xl">' + item.name + '</h4>\
+                                                        <span class="text-gray-500">' + item.designation + '</span>\
+                                                    </div>\
+                                                </div>\
+                                            </div>')
+
                     }
                 })
             }
 
             /* all subject start here */
-                function all_subject()
-                {
-                    $.ajax({
+            function all_subject() {
+                $.ajax({
                     url: '/tutor',
                     type: 'GET',
                     dataType: 'Json',
@@ -868,71 +906,77 @@
                         $("#tutorShow").html('')
                         $.each(response.data, function(key, item) {
                             $("#tutorShow").append('<div class="mx-auto shadow my-3">\
-                                        <img class="h-48 w-72 rounded-md" src=' + item.image + ' alt="">\
-                                        <div class="flex items-center justify-between px-3 py-2">\
-                                            <span class="font-bold">' + item.name + '</span>\
-                                            <p class="flex items-center gap-1">\
-                                                <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">\
-                                                    <title>First star</title>\
-                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">\
-                                                    </path>\
-                                                </svg>\
-                                                <span class="text-gray-400">4.5</span>\
-                                            </p>\
-                                        </div>\
-                                        <div class="flex items-center justify-between px-3 text-gray-400 mb-2">\
-                                            <span class="font-bold">' + item.subject.subject_name + '</span>\
-                                            <span>' + Math.floor((Math.random() * 1000) + 4) + '+ Student</span>\
-                                        </div>\
-                                        <hr class="">\
-                                        <div class="flex items-center justify-between px-3 py-2">\
-                                            <span class="text-gray-400">Fee: ' + item.fee + ' TK</span>\
-                                            <a class="btn btn-sm btn-outline btn-success text-white" href="/tutor/payment/create/'+item.tutor_id+'" >Book</a>\
-                                        </div>\
-                                        </div>')
+                                                                        <img class="h-48 w-72 rounded-md" src=' + item.image + ' alt="">\
+                                                                        <div class="flex items-center justify-between px-3 py-2">\
+                                                                            <span class="font-bold">' + item.name + '</span>\
+                                                                            <p class="flex items-center gap-1">\
+                                                                                <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">\
+                                                                                    <title>First star</title>\
+                                                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">\
+                                                                                    </path>\
+                                                                                </svg>\
+                                                                                <span class="text-gray-400">4.5</span>\
+                                                                            </p>\
+                                                                        </div>\
+                                                                        <div class="flex items-center justify-between px-3 text-gray-400 mb-2">\
+                                                                            <span class="font-bold">' + item.subject
+                                .subject_name + '</span>\
+                                                                            <span>' + Math.floor((Math.random() * 1000) + 4) + '+ Student</span>\
+                                                                        </div>\
+                                                                        <hr class="">\
+                                                                        <div class="flex items-center justify-between px-3 py-2">\
+                                                                            <span class="text-gray-400">Fee: ' + item.fee +
+                                ' TK</span>\
+                                                                            <a class="btn btn-sm btn-outline btn-success text-white" href="/tutor/payment/create/' +
+                                item.tutor_id + '" >Book</a>\
+                                                                        </div>\
+                                                                        </div>')
                         })
                     }
                 })
-                }
+            }
             /* all subject end here */
             /* all tutor start here*/
-                  $.ajax({
-                    url: '/tutor',
-                    type: 'GET',
-                    dataType: 'Json',
-                    success: function(response) {
-                        console.log(response);
-                        $("#tutorShow").html('')
-                        $.each(response.data, function(key, item) {
-                            $("#tutorShow").append('<div class="mx-auto shadow my-3">\
-                                        <img class="h-48 w-72 rounded-md" src=' + item.image + ' alt="">\
-                                        <div class="flex items-center justify-between px-3 py-2">\
-                                            <span class="font-bold">' + item.name + '</span>\
-                                            <p class="flex items-center gap-1">\
-                                                <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">\
-                                                    <title>First star</title>\
-                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">\
-                                                    </path>\
-                                                </svg>\
-                                                <span class="text-gray-400">4.5</span>\
-                                            </p>\
-                                        </div>\
-                                        <div class="flex items-center justify-between px-3 text-gray-400 mb-2">\
-                                            <span class="font-bold">' + item.subject.subject_name + '</span>\
-                                            <span>' + Math.floor((Math.random() * 1000) + 4) + '+ Student</span>\
-                                        </div>\
-                                        <hr class="">\
-                                        <div class="flex items-center justify-between px-3 py-2">\
-                                            <span class="text-gray-400">Fee: ' + item.fee + ' TK</span>\
-                                            <a class="btn btn-sm btn-outline btn-success text-white" href="/tutor/payment/create/'+item.tutor_id+'">Book</a>\
-                                        </div>\
-                                        </div>')
-                        })
-                    }
-                })
-                /* all tutor end here*/
+            $.ajax({
+                url: '/tutor',
+                type: 'GET',
+                dataType: 'Json',
+                success: function(response) {
+                    console.log(response);
+                    $("#tutorShow").html('')
+                    $.each(response.data, function(key, item) {
+                        $("#tutorShow").append('<div class="mx-auto shadow my-3">\
+                                                                        <img class="h-48 w-72 rounded-md" src=' + item.image + ' alt="">\
+                                                                        <div class="flex items-center justify-between px-3 py-2">\
+                                                                            <span class="font-bold">' + item.name + '</span>\
+                                                                            <p class="flex items-center gap-1">\
+                                                                                <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">\
+                                                                                    <title>First star</title>\
+                                                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">\
+                                                                                    </path>\
+                                                                                </svg>\
+                                                                                <span class="text-gray-400">4.5</span>\
+                                                                            </p>\
+                                                                        </div>\
+                                                                        <div class="flex items-center justify-between px-3 text-gray-400 mb-2">\
+                                                                            <span class="font-bold">' + item.subject
+                            .subject_name + '</span>\
+                                                                            <span>' + Math.floor((Math.random() * 1000) + 4) + '+ Student</span>\
+                                                                        </div>\
+                                                                        <hr class="">\
+                                                                        <div class="flex items-center justify-between px-3 py-2">\
+                                                                            <span class="text-gray-400">Fee: ' + item.fee +
+                            ' TK</span>\
+                                                                            <a class="btn btn-sm btn-outline btn-success text-white" href="/tutor/payment/create/' +
+                            item.tutor_id + '">Book</a>\
+                                                                        </div>\
+                                                                        </div>')
+                    })
+                }
+            })
+            /* all tutor end here*/
 
-                
+
             /* subject ways tutor */
             function subject(id) {
                 $.ajax({
@@ -944,28 +988,31 @@
                         $("#tutorShow").html('')
                         $.each(response.data, function(key, item) {
                             $("#tutorShow").append('<div class="mx-auto shadow my-3">\
-                                        <img class="h-48 w-72 rounded-md" src=' + item.image + ' alt="">\
-                                        <div class="flex items-center justify-between px-3 py-2">\
-                                            <span class="font-bold">' + item.name + '</span>\
-                                            <p class="flex items-center gap-1">\
-                                                <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">\
-                                                    <title>First star</title>\
-                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">\
-                                                    </path>\
-                                                </svg>\
-                                                <span class="text-gray-400">4.5</span>\
-                                            </p>\
-                                        </div>\
-                                        <div class="flex items-center justify-between px-3 text-gray-400 mb-2">\
-                                            <span class="font-bold">' + item.subject.subject_name + '</span>\
-                                            <span>' + Math.floor((Math.random() * 1000) + 4) + '+ Student</span>\
-                                        </div>\
-                                        <hr class="">\
-                                        <div class="flex items-center justify-between px-3 py-2">\
-                                            <span class="text-gray-400">Fee: ' + item.fee + ' TK</span>\
-                                            <a class="btn btn-sm btn-outline btn-success text-white" href="/tutor/payment/create/'+item.tutor_id+'">Book</a>\
-                                        </div>\
-                                        </div>')
+                                                                        <img class="h-48 w-72 rounded-md" src=' + item.image + ' alt="">\
+                                                                        <div class="flex items-center justify-between px-3 py-2">\
+                                                                            <span class="font-bold">' + item.name + '</span>\
+                                                                            <p class="flex items-center gap-1">\
+                                                                                <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">\
+                                                                                    <title>First star</title>\
+                                                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">\
+                                                                                    </path>\
+                                                                                </svg>\
+                                                                                <span class="text-gray-400">4.5</span>\
+                                                                            </p>\
+                                                                        </div>\
+                                                                        <div class="flex items-center justify-between px-3 text-gray-400 mb-2">\
+                                                                            <span class="font-bold">' + item.subject
+                                .subject_name + '</span>\
+                                                                            <span>' + Math.floor((Math.random() * 1000) + 4) + '+ Student</span>\
+                                                                        </div>\
+                                                                        <hr class="">\
+                                                                        <div class="flex items-center justify-between px-3 py-2">\
+                                                                            <span class="text-gray-400">Fee: ' + item.fee +
+                                ' TK</span>\
+                                                                            <a class="btn btn-sm btn-outline btn-success text-white" href="/tutor/payment/create/' +
+                                item.tutor_id + '">Book</a>\
+                                                                        </div>\
+                                                                        </div>')
                         })
                     }
                 })

@@ -52,4 +52,10 @@ class TestimonialService
         $image = $testmonial->image;
         return $testmonial->update(TestimonialService::fildResource($request, $image));
     }
+
+    /* testimonial slider */
+    public static function slider()
+    {
+       return Testimonial::inRandomOrder()->take(1)->first();
+    }
 }
