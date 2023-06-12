@@ -28,11 +28,11 @@ class PaymentService
     /* fild resoruce */
     public static function fildResource($request, $id)
     {
-
+        $tutor = TutorService::findById($id);
         return array(
             'user_id' => Auth::id(),
             'amount' => $request->amount,
-            'tutor_id' => $id,
+            'tutor_id' => $tutor->user_id,
             'payment_name' => $request->payment_name,
             'payment_number' => $request->payment_number,
             'transection_id' => $request->transection_id,
