@@ -57,6 +57,61 @@
                     <td><input type="checkbox" name="permission[permission][delete]" value="1"></td>
                     <td><input type="checkbox" name="permission[permission][list]" value="1"></td>
                 </tr>
+
+                <tr>
+                    <td>Location</td>
+                    <td><input type="checkbox" name="permission[location][add]" value="1"></td>
+                    <td><input type="checkbox" name="permission[location][edit]" value="1"></td>
+                    <td><input type="checkbox" name="permission[location][view]" value="1"></td>
+                    <td><input type="checkbox" name="permission[location][delete]" value="1"></td>
+                    <td><input type="checkbox" name="permission[location][list]" value="1"></td>
+                </tr>
+
+
+                <tr>
+                    <td>Services</td>
+                    <td><input type="checkbox" name="permission[service][add]" value="1"></td>
+                    <td><input type="checkbox" name="permission[service][edit]" value="1"></td>
+                    <td><input type="checkbox" name="permission[service][view]" value="1"></td>
+                    <td><input type="checkbox" name="permission[service][delete]" value="1"></td>
+                    <td><input type="checkbox" name="permission[service][list]" value="1"></td>
+                </tr>
+
+                <tr>
+                    <td>book tutor</td>
+                    <td><input type="checkbox" name="permission[book_tutor][add]" value="1"></td>
+                    <td><input type="checkbox" name="permission[book_tutor][edit]" value="1"></td>
+                    <td><input type="checkbox" name="permission[book_tutor][view]" value="1"></td>
+                    <td><input type="checkbox" name="permission[book_tutor][delete]" value="1"></td>
+                    <td><input type="checkbox" name="permission[book_tutor][list]" value="1"></td>
+                </tr>
+
+                <tr>
+                    <td>TUtor edication</td>
+                    <td><input type="checkbox" name="permission[tutor_education][add]" value="1"></td>
+                    <td><input type="checkbox" name="permission[tutor_education][edit]" value="1"></td>
+                    <td><input type="checkbox" name="permission[tutor_education][view]" value="1"></td>
+                    <td><input type="checkbox" name="permission[tutor_education][delete]" value="1"></td>
+                    <td><input type="checkbox" name="permission[tutor_education][list]" value="1"></td>
+                </tr>
+
+                <tr>
+                    <td>Testimonial</td>
+                    <td><input type="checkbox" name="permission[testimonial][add]" value="1"></td>
+                    <td><input type="checkbox" name="permission[testimonial][edit]" value="1"></td>
+                    <td><input type="checkbox" name="permission[testimonial][view]" value="1"></td>
+                    <td><input type="checkbox" name="permission[testimonial][delete]" value="1"></td>
+                    <td><input type="checkbox" name="permission[testimonial][list]" value="1"></td>
+                </tr>
+
+                <tr>
+                    <td>Subject</td>
+                    <td><input type="checkbox" name="permission[subject][add]" value="1"></td>
+                    <td><input type="checkbox" name="permission[subject][edit]" value="1"></td>
+                    <td><input type="checkbox" name="permission[subject][view]" value="1"></td>
+                    <td><input type="checkbox" name="permission[subject][delete]" value="1"></td>
+                    <td><input type="checkbox" name="permission[subject][list]" value="1"></td>
+                </tr>
                 
                 
                 </tbody>

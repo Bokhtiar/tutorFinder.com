@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Permission;
 use App\Models\Role;
+use App\Services\PermissionService;
 use Illuminate\Http\Request;
 
 class PermissionController extends Controller
@@ -11,7 +12,12 @@ class PermissionController extends Controller
     /* Display a listing of the resource. */
     public function index()
     {
-        //
+        try {
+            $permissions = PermissionService::findAll();
+            return view('modules.permission.index', compact('permissions'));
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /* Show the form for creating a new resource */
@@ -25,28 +31,29 @@ class PermissionController extends Controller
         }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    /* Store a newly created resource in storage. */
     public function store(Request $request)
     {
-        //
+        try {
+            PermissionService::storeResource($request);
+            return redirect()->route('permission.index');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Display the specified resource.
-     */
+    /* Display the specified resource. */
     public function show(Permission $permission)
-    {
-        //
-    }
+    {}
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    /* Show the form for editing the specified resource. */
     public function edit(Permission $permission)
     {
-        //
+        try {
+            
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
     /**

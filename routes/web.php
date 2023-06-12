@@ -81,7 +81,7 @@ Route::post('/student/store', [App\Http\Controllers\StudentController::class, 's
 Route::get('student/profile', [App\Http\Controllers\StudentController::class, 'profile'])->name('student.profile');
 Route::put('student/profile/update/{id}', [App\Http\Controllers\StudentController::class, 'update'])->name('student.profile.update');
 
-
+ 
 /* role & permission */
 Route::resource('permission', PermissionController::class);
 Route::resource('role', RoleController::class);

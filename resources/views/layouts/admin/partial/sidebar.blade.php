@@ -86,18 +86,25 @@
         <!-- End subject -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#setting-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-journal-text"></i><span>Settings</span><i class="bi bi-chevron-down ms-auto"></i>
+            <a class="nav-link collapsed" data-bs-target="#role-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-journal-text"></i><span>Role</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
-            <ul id="setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <ul id="role-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                
                 <li>
                     <a href="@route('role.index')">
                         <i class="bi bi-circle"></i><span>List of Role</span>
                     </a>
                 </li>
-          
+            </ul>
+        </li><!-- End user Nav -->
 
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#Permission-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-journal-text"></i><span>Permission</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="Permission-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="@route('permission.index')">
                         <i class="bi bi-circle"></i><span>List of permission</span>
@@ -112,15 +119,5 @@
               
             </ul>
         </li><!-- End user Nav -->
-      
-
-
-        {{-- <li class="nav-item">
-            <a class="nav-link " href="@route('admin.logout')">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Logout</span>
-            </a>
-        </li><!-- End Dashboard Nav --> --}}
-
     </ul>
 </aside>
