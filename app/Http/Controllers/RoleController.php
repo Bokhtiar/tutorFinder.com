@@ -13,9 +13,9 @@ class RoleController extends Controller
     {
         try {
             $roles = RoleService::findAll();
-            return view();
+            return view('modules.role.index', compact('roles'));
         } catch (\Throwable $th) {
-            //throw $th;
+            throw $th;
         }
     }
 
