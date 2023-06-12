@@ -32,6 +32,8 @@ Route::get('/', function () {
     $tutors = Tutor::inRandomOrder()->limit(20)->get();
     return view('welcome', compact('services', 'top_tutors', 'subjects', 'tutors'));
 });
+
+Route::get('/contact/index', [App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
 Route::post('contact/store', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
 
 

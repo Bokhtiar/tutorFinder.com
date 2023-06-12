@@ -85,12 +85,21 @@
         </li>
         <!-- End subject -->
 
+        <!-- contact -->
+        <li class="nav-item">
+            <a class="nav-link" href="@route('contact.index')">
+                <i class="bi bi-grid"></i>
+                <span>Contact list</span>
+            </a>
+        </li>
+        <!-- End subject -->
+
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#role-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-journal-text"></i><span>Role</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="role-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-               
+
                 <li>
                     <a href="@route('role.index')">
                         <i class="bi bi-circle"></i><span>List of Role</span>
@@ -110,13 +119,13 @@
                         <i class="bi bi-circle"></i><span>List of permission</span>
                     </a>
                 </li>
-               
+
                 <li>
                     <a href="@route('permission.create')">
                         <i class="bi bi-circle"></i><span>Permission Create</span>
                     </a>
                 </li>
-              
+
             </ul>
         </li><!-- End user Nav -->
     </ul>
