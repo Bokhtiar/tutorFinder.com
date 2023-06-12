@@ -92,7 +92,7 @@
             <ul id="setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                
                 <li>
-                    <a href="">
+                    <a href="@route('role.index')">
                         <i class="bi bi-circle"></i><span>List of Role</span>
                     </a>
                 </li>
