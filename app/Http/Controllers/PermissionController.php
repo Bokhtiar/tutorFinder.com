@@ -48,7 +48,7 @@ class PermissionController extends Controller
     {}
 
     /* Show the form for editing the specified resource. */
-    public function edit($id)
+    public function edit($id) 
     {
         try {
             $permission = PermissionService::findById($id);
