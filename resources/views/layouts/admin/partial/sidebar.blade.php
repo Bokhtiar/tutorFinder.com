@@ -85,7 +85,34 @@
         </li>
         <!-- End subject -->
 
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#setting-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-journal-text"></i><span>Settings</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+               
+                <li>
+                    <a href="">
+                        <i class="bi bi-circle"></i><span>List of Role</span>
+                    </a>
+                </li>
+          
 
+                <li>
+                    <a href="@route('permission.index')">
+                        <i class="bi bi-circle"></i><span>List of permission</span>
+                    </a>
+                </li>
+               
+                <li>
+                    <a href="@route('permission.create')">
+                        <i class="bi bi-circle"></i><span>Permission Create</span>
+                    </a>
+                </li>
+              
+            </ul>
+        </li><!-- End user Nav -->
+      
 
 
         {{-- <li class="nav-item">

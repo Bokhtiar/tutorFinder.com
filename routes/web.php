@@ -9,6 +9,7 @@ use App\Http\Controllers\CityController;
 use App\Http\Controllers\StateController;
 use App\Http\Controllers\VillageController;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\TestimonialController;
@@ -72,3 +73,7 @@ Route::get('/student/singup', [App\Http\Controllers\StudentController::class, 's
 Route::post('/student/store', [App\Http\Controllers\StudentController::class, 'store'])->name('student.store');
 Route::get('student/profile', [App\Http\Controllers\StudentController::class, 'profile'])->name('student.profile');
 Route::put('student/profile/update/{id}', [App\Http\Controllers\StudentController::class, 'update'])->name('student.profile.update');
+
+
+/* permission */
+Route::resource('permission', PermissionController::class);
