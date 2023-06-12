@@ -9,6 +9,7 @@ use App\Services\TutorService;
 use App\Services\StateService;
 use App\Services\SubjectService;
 use App\Services\CountryService;
+use App\Services\TutorEducationService;
 use App\Services\VillageService;
 
 use Illuminate\Support\Facades\Auth;
@@ -88,7 +89,8 @@ class TutorController extends Controller
     {
         try {
             $show = TutorService::findById($id);
-            return view('tutor.auth.profile', compact('show'));
+            $educations = TutorEducationService::findAllSpecificTutorEducation($id);
+            return view('tutor.auth.profile', compact('show','educations'));
         } catch (\Throwable $th) {
             throw $th;
         }

@@ -42,4 +42,10 @@ class TutorEducationService
         $tutorEducation = TutorEducationService::findById($id);
         return $tutorEducation->update(TutorEducationService::fildResource($request));
     }
+
+    /* specifuc tutor education list */
+    public static function findAllSpecificTutorEducation($id)
+    {
+        return TutorEducation::where('tutor_id',$id)->get();
+    }
 }

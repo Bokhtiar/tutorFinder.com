@@ -11,7 +11,10 @@
                     <th scope="col">Institute</th>
                     <th scope="col">Degree</th>
                     <th scope="col">Result</th>
-                    <th scope="col">Action</th>
+                    @if (@$action == true)
+                        <th scope="col">Action</th>    
+                    @endif
+                    
                 </tr>
             </thead>
             <tbody>
@@ -22,7 +25,7 @@
                         <td>{{ $item->institute_name }}</td>
                         <td>{{ $item->degree_name }}</td>
                         <td>{{ $item->result }}</td>
-
+                        @if (@$action == true)
                         <td class="d-flex items-center gap-2">
                             <a class="btn btn-sm btn-success" href="@route('tutor-education.edit', $item->tutor_education_id)"><i
                                     class="bi bi-pencil-square"></i></a>
@@ -33,6 +36,7 @@
                                         class="bi bi-trash"></i></button>
                             </form>
                         </td>
+                        @endif
                     </tr>
                 @empty
                     <h5 class="text-danger text-center">Data Not Available</h5>
