@@ -19,51 +19,56 @@ class RoleController extends Controller
         }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    /* Show the form for creating a new resource */
     public function create()
-    {
-        //
-    }
+    {}
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    /* Store a newly created resource in storage. */
     public function store(Request $request)
     {
-        //
+        try {
+            RoleService::storeResource($request);
+            return back();
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Role $role)
+    /* Display the specified resource. */
+    public function show($id)
+    {}
+
+    /* Show the form for editing the specified resource. */
+    public function edit($id)
     {
-        //
+        try {
+            $roles = RoleService::findAll();
+            $edit = RoleService::findById($id);
+            return view('modules.role.index', compact('roles', 'edit'));
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Role $role)
+    /* Update the specified resource in storage. */
+    public function update(Request $request, $id)
     {
-        //
+        try {
+            RoleService::findByIdAndUpdate($id, $request);
+            return back();
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Role $role)
+    /* Remove the specified resource from storage. */
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Role $role)
-    {
-        //
+        try {
+            RoleService::findById($id)->delete();
+            return back();
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }
