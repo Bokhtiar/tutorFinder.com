@@ -67,6 +67,7 @@ Route::resource('tutor-education', TutorEducationController::class);
 
 /* tutor */
 Route::get('/tutor', [App\Http\Controllers\TutorController::class, 'index']);
+Route::get('/tutor/show/{id}', [App\Http\Controllers\TutorController::class, 'show'])->name('tutor.show');
 Route::get('/tutor/payment/create/{id}', [App\Http\Controllers\TutorController::class, 'payment']);
 Route::get('/tutor/payment/index', [App\Http\Controllers\PaymentController::class, 'index'])->name('tutor.payment.index');
 Route::post('/tutor/payment/{id}', [App\Http\Controllers\PaymentController::class, 'store'])->name('tutor.payment')->middleware('auth');

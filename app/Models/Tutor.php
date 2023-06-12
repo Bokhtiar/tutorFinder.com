@@ -18,6 +18,27 @@ class Tutor extends Model
         'village_id', 'address', 'bio', 'image' 
     ]; 
 
+    public function country()
+    {
+        return $this->belongsTo(Country::class, 'country_id', 'country_id');
+    }
+
+    public function state()
+    {
+        return $this->belongsTo(State::class, 'state_id', 'state_id');
+    }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class, 'city_id', 'city_id');
+    }
+
+
+    public function village()
+    {
+        return $this->belongsTo(Village::class, 'village_id', 'village_id');
+    }
+
     public function subject()
     {
         return $this->belongsTo(Subject::class, 'subject_id', 'subject_id');

@@ -82,4 +82,15 @@ class TutorController extends Controller
             throw $th;
         }
     }
+
+    /* dislay of tutor profile */
+    public function show($id)
+    {
+        try {
+            $show = TutorService::findById($id);
+            return view('tutor.auth.profile', compact('show'));
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
 }

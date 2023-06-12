@@ -12,17 +12,21 @@
                     <th scope="col">Payment name</th>
                     <th scope="col">Payment number</th>
                     <th scope="col">Transection id</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
                 @forelse ($payments as $item)
                     <tr>
                         <th scope="row">{{ $loop->index + 1 }}</th>
-                        <td>{{ $item->user ? $item->user->name : "" }}</td>
-                        <td>{{ $item->tutor ? $item->tutor->name : "" }}</td>
+                        <td>{{ $item->user ? $item->user->name : '' }}</td>
+                        <td>{{ $item->tutor ? $item->tutor->name : '' }}</td>
                         <td>{{ $item->payment_name }}</td>
                         <td>{{ $item->payment_number }}</td>
                         <td>{{ $item->transection_id }}</td>
+                        <td>
+                            <a href="@route('tutor.show', $item->tutor_id )" class="btn btn-sm btn-success"><i class="bi bi-eye"></i></a>
+                        </td>
                     </tr>
                 @empty
                     <h5 class="text-danger text-center">Data Not Available</h5>
