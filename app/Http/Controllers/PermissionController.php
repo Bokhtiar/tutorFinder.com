@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Permission;
 use App\Models\Role;
 use App\Services\PermissionService;
+use App\Services\RoleService;
 use Illuminate\Http\Request;
 
 class PermissionController extends Controller
@@ -47,21 +48,26 @@ class PermissionController extends Controller
     {}
 
     /* Show the form for editing the specified resource. */
-    public function edit(Permission $permission)
+    public function edit($id)
     {
         try {
-            
+            $permission = PermissionService::findById($id);
+            $roles = RoleService::findAll();
+            return view('modules.permission.edit', compact('permission', 'roles'));
         } catch (\Throwable $th) {
-            //throw $th;
+            throw $th;
         }
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Permission $permission)
+    /* Update the specified resource in storage. */
+    public function update(Request $request, $id)
     {
-        //
+        try {
+            PermissionService::findByIdAndUpdate($id, $request);
+            return redirect()->route('permission.index');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /**
