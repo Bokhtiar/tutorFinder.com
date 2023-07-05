@@ -148,7 +148,7 @@
                 {{-- card start here --}}
                 @forelse ($top_tutors as $item)
                     <div class="mx-auto shadow mt-3">
-                        <img class="h-48 w-72 rounded-md" src="{{ $item->image }}" alt="">
+                        <img class="h-72 w-72 rounded-md" src="{{ $item->image }}" alt="">
                         <p class="text-center my-3">
                             <span class="font-bold">{{ $item->name }}</span><br>
                             <span class="text-gray-400">{{ $item->subject ? $item->subject->subject_name : '' }}</span>
@@ -910,7 +910,7 @@
                         $("#tutorShow").html('')
                         $.each(response.data, function(key, item) {
                             $("#tutorShow").append('<div class="mx-auto shadow my-3">\
-                                                                        <img class="h-48 w-72 rounded-md" src=' + item.image + ' alt="">\
+                                                                        <img class="h-72 w-72 rounded-md" src=' + item.image + ' alt="">\
                                                                         <div class="flex items-center justify-between px-3 py-2">\
                                                                             <span class="font-bold">' + item.name + '</span>\
                                                                             <p class="flex items-center gap-1">\
@@ -950,7 +950,7 @@
                     $("#tutorShow").html('')
                     $.each(response.data, function(key, item) {
                         $("#tutorShow").append('<div class="mx-auto shadow my-3">\
-                                                                        <img class="h-48 w-72 rounded-md" src=' + item.image + ' alt="">\
+                                                                        <img class="h-72 w-72 rounded-md" src=' + item.image + ' alt="">\
                                                                         <div class="flex items-center justify-between px-3 py-2">\
                                                                             <span class="font-bold">' + item.name + '</span>\
                                                                             <p class="flex items-center gap-1">\
@@ -992,7 +992,7 @@
                         $("#tutorShow").html('')
                         $.each(response.data, function(key, item) {
                             $("#tutorShow").append('<div class="mx-auto shadow my-3">\
-                                                                        <img class="h-48 w-72 rounded-md" src=' + item.image + ' alt="">\
+                                                                        <img class="h-72 w-72 rounded-md" src=' + item.image + ' alt="">\
                                                                         <div class="flex items-center justify-between px-3 py-2">\
                                                                             <span class="font-bold">' + item.name + '</span>\
                                                                             <p class="flex items-center gap-1">\
