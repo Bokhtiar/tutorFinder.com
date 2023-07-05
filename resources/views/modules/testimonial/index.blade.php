@@ -13,7 +13,7 @@
 
     {{-- breadCrumbs --}}
     @component('components.breadcrumbs', [
-        'pageTitle' => 'Village List',
+        'pageTitle' => 'Testimonial List',
         'anotherPageIcon' => 'bi bi-plus',
         'anotherPageUrl' => 'testimonial.create',
     ])

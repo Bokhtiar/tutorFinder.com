@@ -55,7 +55,7 @@ Route::resource('village', VillageController::class);
 /* subject */
 Route::resource('subject', SubjectController::class);
 Route::get('/subject-ways-tutor/{id}', [SubjectController::class, 'subject_ways_tutor']);
-
+ 
 
 /* services */
 Route::resource('services', ServicesController::class);

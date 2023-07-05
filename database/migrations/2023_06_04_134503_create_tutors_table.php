@@ -19,9 +19,9 @@ return new class extends Migration
             $table->integer('tutor_hour');
             $table->integer('weekly_day');
             $table->integer('fee');
-            $table->string('fb'); 
-            $table->string('insta');
-            $table->string('linkdin');
+            $table->string('fb')->nullable(); 
+            $table->string('insta')->nullable();
+            $table->string('linkdin')->nullable();
             $table->integer('country_id');
             $table->integer('state_id');
             $table->integer('city_id');

@@ -50,6 +50,8 @@
 
                     <form method="POST" action="@route('tutor.payment', $tutor->tutor_id)">
                         @csrf
+                        <br>
+                        <span class="text-success">Payment number (bkash, rocket, nogud): 01300573753</span>
                         <input type="hidden" name="tutor_id" value="{{$tutor->tutor_id}}" id="">
                         {{-- payment amount --}}
                         <div class="my-4">

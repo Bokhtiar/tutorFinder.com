@@ -17,7 +17,7 @@ class PaymentController extends Controller
             if (Auth::user()->role_id == 2) {
                 $payments = PaymentService::findAllTutorRequest();
             } elseif (Auth::user()->role_id == 3) {
-                $payments = PaymentService::findAllTutorRequestSend();
+                $payments = PaymentService::findAllTutorRequestSend(); 
             } else {
                 $payments = PaymentService::findAll();
             }

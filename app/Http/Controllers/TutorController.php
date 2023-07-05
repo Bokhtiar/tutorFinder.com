@@ -18,7 +18,7 @@ class TutorController extends Controller
 {
     /* booking */
     public function payment($id)
-    {
+    { 
         $tutor = TutorService::findById($id);
         return view('modules.payment.create', compact('tutor'));
     }
@@ -94,5 +94,5 @@ class TutorController extends Controller
         } catch (\Throwable $th) {
             throw $th;
         }
-    }
+    } 
 }

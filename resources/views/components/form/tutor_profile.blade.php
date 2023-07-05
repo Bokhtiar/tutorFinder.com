@@ -72,6 +72,7 @@
                             'field_id' => 'subject_id',
                             'label' => 'Select subject',
                             'field_name' => 'subject_name',
+                            'required' => true,
                             'value' => @$edit ? @$edit->subject_id : '',
                         ])
                         @endcomponent
@@ -180,6 +181,7 @@
                             'field_id' => 'country_id',
                             'label' => 'Select country',
                             'field_name' => 'country_name',
+                            'required' => true,
                             'value' => @$edit ? @$edit->country_id : '',
                         ])
                         @endcomponent
@@ -194,6 +196,7 @@
                             'field_id' => 'state_id',
                             'label' => 'Select state',
                             'field_name' => 'state_name',
+                            'required' => true,
                             'value' => @$edit ? @$edit->state_id : '',
                         ])
                         @endcomponent
@@ -207,6 +210,7 @@
                             'resource' => $cities,
                             'field_id' => 'city_id',
                             'label' => 'Select city',
+                            'required' => true,
                             'field_name' => 'city_name',
                             'value' => @$edit ? @$edit->city_id : '',
                         ])
@@ -223,6 +227,7 @@
                             'field_id' => 'village_id',
                             'label' => 'Select village',
                             'field_name' => 'village_name',
+                            'required' => true,
                             'value' => @$edit ? @$edit->village_id : '',
                         ])
                         @endcomponent
@@ -233,6 +238,7 @@
                         @component('components.textarea', [
                             'label' => 'Address',
                             'name' => 'address',
+                            'required' => true,
                             'placeholder' => 'type here address',
                             'value' => @$edit ? @$edit->address : '',
                         ])
@@ -256,7 +262,7 @@
                             'label' => 'Bio',
                             'name' => 'bio',
                             'placeholder' => 'type here bio',
-                            'required' => false,
+                            'required' => true,
                             'value' => @$edit ? @$edit->bio : '',
                         ])
                         @endcomponent

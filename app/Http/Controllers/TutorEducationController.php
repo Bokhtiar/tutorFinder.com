@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\TutorEducationRequest;
+use App\Models\Tutor;
 use App\Models\TutorEducation;
 use App\Services\TutorEducationService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TutorEducationController extends Controller
 {
@@ -13,7 +15,13 @@ class TutorEducationController extends Controller
     public function index()
     {
         try {
-            $tutorEducations = TutorEducationService::findAll();
+            if (Auth::user()->role_id == 2) {
+                $tutor = Auth::user()->id;
+                $tutor_id = Tutor::where('user_id', $tutor)->first();
+                $tutorEducations = TutorEducationService::findTutorEducation($tutor_id->tutor_id);
+            }else{
+                $tutorEducations = TutorEducationService::findAll();
+            }
             return view('tutor.education.index', compact('tutorEducations'));
         } catch (\Throwable $th) {
             throw $th;

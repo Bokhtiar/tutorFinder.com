@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Tutor;
 use App\Models\TutorEducation;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,11 +14,19 @@ class TutorEducationService
         return TutorEducation::latest()->get();
     }
 
+    /* tutor education list */
+    public static function findTutorEducation($id)
+    { 
+        return TutorEducation::where('tutor_id', $id)->get();
+    }
+
     /* fild resoruce */
     public static function fildResource($request)
     {
+        $user_id = Auth::user()->id;
+        $tutor = Tutor::where('user_id', $user_id)->first();
         return array(
-            'tutor_id' => Auth::user()->id,
+            'tutor_id' => $tutor->tutor_id,
             'institute_name' => $request->institute_name,
             'degree_name' => $request->degree_name,
             'result' => $request->result,
@@ -46,6 +55,6 @@ class TutorEducationService
     /* specifuc tutor education list */
     public static function findAllSpecificTutorEducation($id)
     {
-        return TutorEducation::where('tutor_id',$id)->get();
+        return TutorEducation::where('tutor_id', $id)->get();
     }
 }

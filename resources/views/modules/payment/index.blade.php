@@ -2,7 +2,7 @@
 @extends('layouts.admin.app')
 
 {{-- title --}}
-@section('title', 'State list')
+@section('title', 'Payment list')
 
 {{-- css link --}}
 @section('css')
@@ -13,7 +13,7 @@
 
     {{-- breadCrumbs --}}
     @component('components.breadcrumbs', [
-        'pageTitle' => 'State List',
+        'pageTitle' => 'Payment List',
         'anotherPageIcon' => 'bi bi-plus',
         'anotherPageUrl' => 'state.index',
     ])

@@ -21,6 +21,6 @@ class TutorEducation extends Model
     /* tutor */
     public function tutor()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Tutor::class, 'tutor_id', 'tutor_id');
     }
 }
