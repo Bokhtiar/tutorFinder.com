@@ -2,7 +2,7 @@
 @extends('layouts.admin.app')
 
 {{-- title --}}
-@section('title', 'Country list')
+@section('title', 'Dashboard')
 
 {{-- css link --}}
 @section('css')
