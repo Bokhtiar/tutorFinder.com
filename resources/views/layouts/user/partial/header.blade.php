@@ -30,8 +30,7 @@
                                     <span class="badge">go</span>
                                 </a>
                             </li>
-                            <li><a @route('logouts')>Logout</a></li>
-                            
+                            <li><a href="@route('logouts')">Logout</a></li>
                         @else
                             <li><a href="@route('login')">Login</a></li>
                         @endif

@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Payment;
+use App\Models\Tutor;
 use Illuminate\Support\Facades\Auth;
 
 class PaymentService
@@ -16,7 +17,9 @@ class PaymentService
     /* list of resoruce for tutor */
     public static function findAllTutorRequest()
     {
-        return Payment::where('tutor_id', Auth::id())->get();
+        $user = Auth::user()->id;
+        $tutor = Tutor::where('user_id', $user)->first();
+        return Payment::where('tutor_id', $tutor->tutor_id)->get();
     }
 
     /* list of resoruce for student */
