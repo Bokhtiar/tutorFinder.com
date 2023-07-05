@@ -15,7 +15,7 @@
     @component('components.breadcrumbs', [
         'pageTitle' => 'Payment List',
         'anotherPageIcon' => 'bi bi-plus',
-        'anotherPageUrl' => 'state.index',
+        'anotherPageUrl' => 'tutor.payment.index',
     ])
     @endcomponent
 

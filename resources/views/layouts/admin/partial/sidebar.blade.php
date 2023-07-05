@@ -156,5 +156,12 @@
             </li>
         @endisset
         <!-- End permission -->
+
+        <li class="nav-item">
+            <a class="nav-link" href="@route('logouts')">
+                <i class="bi bi-grid"></i>
+                <span>Logout</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
     </ul>
 </aside>
